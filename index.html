@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
@@ -23,23 +21,38 @@
   <body>
     <div class="container">
       <header>
-        <div class="brand">
-          <a href="index.html">
-            <img src="/images/logo.svg" alt="manage landing page logo">
-          </a>
-        </div>
-        <div class="menu-open">
-          <span class="hamburger"></span>
-        </div>
-      </header>
-      
-      <main>
-        
+        <nav>
+          <div class="brand">
+            <a href="index.html">
+              <img src="/images/logo.svg" alt="manage landing page logo">
+            </a>
+          </div>
+          <div class="menu-open">
+            <span class="hamburger"></span>
+          </div>
+          <ul style="display: none">
+            <li>
+              <a href="#">Pricing</a>
+            </li>
+            <li>
+              <a href="#">Product</a>
+            </li>
+            <li>
+              <a href="#">About Us</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Community</a>
+            </li>
+            <button>Get Started</button>
+          </ul>
+        </nav>       
         <section class="hero">
           <figure class="hero__image">
             <img src="/images/illustration-intro.svg" alt="graph-chart-data">
           </figure>
-
           <div class="hero__text">
             <h1 class="title">
               Bring everyone together to build better products.
@@ -47,19 +60,11 @@
             <p class="subtitle">
               Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.
             </p>
+            <button class="cta cta--header">Get Started</button>
           </div>
-          <!-- <img src="/images/bg-tablet-pattern.svg" class="bg-big" alt=""> -->
         </section>
-        <!-- <img src="/images/bg-tablet-pattern.svg" alt=""> -->
-      </main>
+    </header>
     </div> <!-- container -->
-    
 
-    <!-- <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
   </body>
 </html>

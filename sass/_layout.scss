@@ -1,3 +1,10 @@
+header {
+  background: url(/images/bg-tablet-pattern.svg) top -2rem right -5rem no-repeat;
+  background-size: 100%;
+
+  padding: 3rem 8vw;
+}
+
 .hamburger {
   background: url(/images/icon-hamburger.svg);
   height: 18px;
@@ -5,7 +12,7 @@
   display: block;
 }
 
-header {
+nav {
   display: flex;
 
   .menu-open {
@@ -14,15 +21,24 @@ header {
 }
 
 .hero {
-  // position: relative;
   width: 100%;
   padding-top: 3rem;
 
   &__image {
     img {
-      // display: block;
-      // position: relative;
       width: 100%;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    .title {
+      font-size: 2rem;
+    }
+    .subtitle {
+      color: $color-gray-blue;
+      padding-top: 0.5rem;
+      padding-bottom: 1.5rem;
     }
   }
 }

@@ -61,6 +61,13 @@ For the social icons, you can use the icons provided or a font icon library. Som
           <button>Get Started</button>
         </nav> -->
 
+        <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+
 Get
 Started What’s different about Manage? Manage provides all the functionality
 your team needs, without the complexity. Our software is tailor-made for

@@ -9,11 +9,25 @@ html {
   box-sizing: border-box; }
 
 body {
-  font-family: "Be Vietnam", sans-serif;
-  background: url(/images/bg-tablet-pattern.svg) top -10.1rem right -5.5rem no-repeat; }
+  font-family: "Be Vietnam", sans-serif; }
 
 .container {
-  max-width: 1440px;
+  max-width: 1440px; }
+
+.cta {
+  border-radius: 2.5rem;
+  border: 1px solid #f25f3a;
+  background: #f25f3a;
+  color: #fafafa; }
+  .cta--header {
+    width: 9rem;
+    height: 2.6rem;
+    font-size: 0.9rem;
+    box-shadow: 0px 12px 13px -10px #f25f3a; }
+
+header {
+  background: url(/images/bg-tablet-pattern.svg) top -2rem right -5rem no-repeat;
+  background-size: 100%;
   padding: 3rem 8vw; }
 
 .hamburger {
@@ -22,9 +36,9 @@ body {
   width: 20px;
   display: block; }
 
-header {
+nav {
   display: flex; }
-  header .menu-open {
+  nav .menu-open {
     margin-left: auto; }
 
 .hero {
@@ -32,3 +46,11 @@ header {
   padding-top: 3rem; }
   .hero__image img {
     width: 100%; }
+  .hero__text {
+    text-align: center; }
+    .hero__text .title {
+      font-size: 2rem; }
+    .hero__text .subtitle {
+      color: #9095a7;
+      padding-top: 0.5rem;
+      padding-bottom: 1.5rem; }
