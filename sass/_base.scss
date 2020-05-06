@@ -59,3 +59,13 @@ body {
 img {
   max-width: 100%;
 }
+
+h1,
+h3 {
+  color: $color-dark-blue;
+}
+
+p {
+  color: $color-gray-blue;
+  line-height: 2;
+}

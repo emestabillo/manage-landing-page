@@ -38,6 +38,14 @@ body {
 img {
   max-width: 100%; }
 
+h1,
+h3 {
+  color: #242d52; }
+
+p {
+  color: #9095a7;
+  line-height: 2; }
+
 header {
   padding: 3rem 8vw; }
 
@@ -77,31 +85,51 @@ nav {
   .hero__text .title {
     font-size: 2.6rem;
     color: #242d52; }
+    @media screen and (min-width: 840px) {
+      .hero__text .title {
+        font-size: 2.3rem; } }
   .hero__text p {
-    color: #9095a7;
     font-size: 1.2rem;
-    line-height: 2;
     padding-top: 0.5rem;
     padding-bottom: 1.5rem; }
+    @media screen and (min-width: 840px) {
+      .hero__text p {
+        padding-right: 8vw;
+        padding-top: 2rem;
+        padding-bottom: 3rem; } }
 
 .features {
   padding: 3rem 8vw; }
+  @media screen and (min-width: 840px) {
+    .features {
+      display: flex;
+      justify-content: space-between; } }
   .features__text {
     text-align: center;
     padding-bottom: 5rem; }
+    @media screen and (min-width: 840px) {
+      .features__text {
+        width: 45%;
+        text-align: left;
+        padding-bottom: 0; } }
     .features__text h1 {
       font-size: 2.2rem;
       padding-bottom: 1.5rem; }
-    .features__text p {
-      color: #9095a7;
-      line-height: 2;
-      font-weight: 400; }
+    @media screen and (min-width: 840px) {
+      .features__text p {
+        padding-right: 8vw; } }
+  @media screen and (min-width: 840px) {
+    .features__list {
+      width: 50%; } }
   .features__list .item {
     padding-bottom: 2.8rem; }
     .features__list .item .heading {
       display: flex;
       background: #fff0ec;
       margin-right: -2rem; }
+      @media screen and (min-width: 840px) {
+        .features__list .item .heading {
+          background: none; } }
       .features__list .item .heading .feature-number {
         width: 4.2rem;
         height: 2.4rem;
@@ -111,6 +139,4 @@ nav {
         padding-left: 1rem;
         padding-top: 3px; }
     .features__list .item p {
-      padding-top: 0.8rem;
-      color: #9095a7;
-      line-height: 2; }
+      padding-top: 0.8rem; }
