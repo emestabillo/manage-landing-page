@@ -50,9 +50,9 @@ body {
   &--header,
   &--reviews,
   &--action {
-    width: 9.6rem;
-    height: 3rem;
-    font-size: 0.8rem;
+    width: 10rem;
+    height: 3.2rem;
+    font-size: 0.9rem;
     font-weight: 700;
     box-shadow: 0px 12px 13px -10px rgba(242, 95, 58, 1);
   }
@@ -60,6 +60,9 @@ body {
   &--action {
     background-color: $color-light-red;
     color: $color-bright-red;
+    @media screen and (min-width: 920px) {
+      align-self: center;
+    }
   }
 }
 

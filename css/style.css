@@ -31,15 +31,19 @@ body {
   .feature-number--header,
   .feature-number--reviews,
   .feature-number--action {
-    width: 9.6rem;
-    height: 3rem;
-    font-size: 0.8rem;
+    width: 10rem;
+    height: 3.2rem;
+    font-size: 0.9rem;
     font-weight: 700;
     box-shadow: 0px 12px 13px -10px #f25f3a; }
   .cta--action,
   .feature-number--action {
     background-color: #fff0ec;
     color: #f25f3a; }
+    @media screen and (min-width: 920px) {
+      .cta--action,
+      .feature-number--action {
+        align-self: center; } }
 
 img {
   max-width: 100%; }
@@ -218,6 +222,11 @@ nav {
   padding: 5rem 8vw;
   background: #f25f3a;
   position: relative; }
+  @media screen and (min-width: 920px) {
+    .action {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 5rem 12vw; } }
   .action::before {
     content: " ";
     display: block;
@@ -231,13 +240,20 @@ nav {
     background-image: url(/images/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
     /* background-position: 100% 40%; */
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: 100%; }
+    background-size: cover;
+    background-position: 100% 0%; }
+    @media screen and (min-width: 920px) {
+      .action::before {
+        left: -1rem;
+        top: 0;
+        width: 60%; } }
   .action h1 {
     text-align: center;
     font-size: 2.6rem;
     color: #fafafa;
     padding-bottom: 3rem; }
+    @media screen and (min-width: 920px) {
+      .action h1 {
+        width: 50%;
+        padding-bottom: 0;
+        text-align: left; } }

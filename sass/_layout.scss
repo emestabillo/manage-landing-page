@@ -266,7 +266,6 @@ nav {
 ///////////////
 //CTA section//
 //////////////
-
 .action {
   display: flex;
   flex-direction: column;
@@ -275,6 +274,12 @@ nav {
   padding: 5rem 8vw;
   background: $color-bright-red;
   position: relative;
+
+  @media screen and (min-width: 920px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem 12vw;
+  }
 
   &::before {
     content: " ";
@@ -289,11 +294,14 @@ nav {
     background-image: url(/images/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
     /* background-position: 100% 40%; */
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: 100%;
+    background-size: cover;
+    background-position: 100% 0%;
+
+    @media screen and (min-width: 920px) {
+      left: -1rem;
+      top: 0;
+      width: 60%;
+    }
   }
 
   h1 {
@@ -301,5 +309,11 @@ nav {
     font-size: 2.6rem;
     color: $color-light-gray;
     padding-bottom: 3rem;
+
+    @media screen and (min-width: 920px) {
+      width: 50%;
+      padding-bottom: 0;
+      text-align: left;
+    }
   }
 }
