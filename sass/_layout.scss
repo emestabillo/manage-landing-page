@@ -262,3 +262,44 @@ nav {
     }
   }
 }
+
+///////////////
+//CTA section//
+//////////////
+
+.action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 8vw;
+  background: $color-bright-red;
+  position: relative;
+
+  &::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: -21rem;
+    top: 4rem;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.1;
+    background-image: url(/images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    /* background-position: 100% 40%; */
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: 100%;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.6rem;
+    color: $color-light-gray;
+    padding-bottom: 3rem;
+  }
+}
