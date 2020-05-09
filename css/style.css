@@ -27,9 +27,10 @@ body {
   border: 1px solid #f25f3a;
   background: #f25f3a;
   color: #fafafa; }
-  .cta--header,
-  .feature-number--header {
-    width: 9rem;
+  .cta--header, .cta--reviews,
+  .feature-number--header,
+  .feature-number--reviews {
+    width: 9.6rem;
     height: 3rem;
     font-size: 0.8rem;
     font-weight: 700;
@@ -47,7 +48,7 @@ p {
   line-height: 2; }
 
 header {
-  padding: 3rem 8vw; }
+  padding: 3rem 8vw 5rem; }
 
 .hamburger {
   background: url(/images/icon-hamburger.svg);
@@ -62,52 +63,49 @@ nav {
 
 .hero {
   padding-top: 3rem; }
-  @media screen and (min-width: 840px) {
+  @media screen and (min-width: 920px) {
     .hero {
       padding-top: 5rem;
       display: flex;
       justify-content: space-between; } }
-  @media screen and (min-width: 840px) {
+  @media screen and (min-width: 920px) {
     .hero__image {
       order: 2;
-      width: 45%; } }
+      width: 50%; } }
   .hero__image img {
     display: block;
     margin: 0 auto; }
-  @media screen and (max-width: 839px) {
+  @media screen and (max-width: 919px) {
     .hero__text {
       text-align: center; } }
-  @media screen and (min-width: 840px) {
+  @media screen and (min-width: 920px) {
     .hero__text {
       text-align: left;
-      width: 50%;
+      width: 45%;
       align-self: center; } }
   .hero__text .title {
     font-size: 2.6rem;
     color: #242d52; }
-    @media screen and (min-width: 840px) {
+    @media screen and (min-width: 920px) {
       .hero__text .title {
         font-size: 2.3rem; } }
   .hero__text p {
-    font-size: 1.2rem;
     padding-top: 0.5rem;
     padding-bottom: 1.5rem; }
-    @media screen and (min-width: 840px) {
+    @media screen and (min-width: 920px) {
       .hero__text p {
-        padding-right: 8vw;
-        padding-top: 2rem;
-        padding-bottom: 3rem; } }
+        padding: 1.5rem 8vw 2rem 0; } }
 
 .features {
-  padding: 3rem 8vw; }
-  @media screen and (min-width: 840px) {
+  padding: 3rem 8vw 5rem; }
+  @media screen and (min-width: 920px) {
     .features {
       display: flex;
       justify-content: space-between; } }
   .features__text {
     text-align: center;
     padding-bottom: 5rem; }
-    @media screen and (min-width: 840px) {
+    @media screen and (min-width: 920px) {
       .features__text {
         width: 45%;
         text-align: left;
@@ -115,10 +113,10 @@ nav {
     .features__text h1 {
       font-size: 2.2rem;
       padding-bottom: 1.5rem; }
-    @media screen and (min-width: 840px) {
+    @media screen and (min-width: 920px) {
       .features__text p {
         padding-right: 8vw; } }
-  @media screen and (min-width: 840px) {
+  @media screen and (min-width: 920px) {
     .features__list {
       width: 50%; } }
   .features__list .item {
@@ -126,8 +124,8 @@ nav {
     .features__list .item .heading {
       display: flex;
       background: #fff0ec;
-      margin-right: -2rem; }
-      @media screen and (min-width: 840px) {
+      margin-right: -8vw; }
+      @media screen and (min-width: 920px) {
         .features__list .item .heading {
           background: none; } }
       .features__list .item .heading .feature-number {
@@ -140,3 +138,69 @@ nav {
         padding-top: 3px; }
     .features__list .item p {
       padding-top: 0.8rem; }
+
+.reviews {
+  text-align: center;
+  padding: 0 8vw 5rem;
+  overflow: hidden; }
+  @media screen and (min-width: 1078px) {
+    .reviews {
+      padding: 0 0 5rem; } }
+  .reviews h2 {
+    font-size: 2.2rem;
+    padding-bottom: 4rem; }
+  .reviews__wrapper {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    margin-bottom: 2rem; }
+    .reviews__wrapper::-webkit-scrollbar {
+      display: none; }
+    @media screen and (min-width: 920px) and (max-width: 1077px) {
+      .reviews__wrapper {
+        width: 700px; } }
+    @media screen and (min-width: 920px) {
+      .reviews__wrapper {
+        margin: 0 auto 1.5rem; } }
+    .reviews__wrapper .card {
+      position: relative;
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      width: 100%;
+      margin-right: 3rem;
+      transform-origin: center center;
+      transform: scale(1);
+      transition: transform 0.5s; }
+      @media screen and (min-width: 1078px) {
+        .reviews__wrapper .card {
+          width: 33.3%;
+          margin-right: 2rem; } }
+      .reviews__wrapper .card img {
+        width: 5rem;
+        height: 5rem;
+        position: relative;
+        margin-top: 2rem;
+        margin-bottom: -2.5rem;
+        text-align: center; }
+      .reviews__wrapper .card .testimonial {
+        background: #fafafa;
+        padding: 3.2rem 1rem 2rem;
+        width: 100%; }
+  .reviews .dots {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem; }
+    .reviews .dots a {
+      cursor: pointer;
+      height: 0.8rem;
+      width: 0.8rem;
+      margin: 0 0.25rem;
+      border: 1px solid #f25f3a;
+      border-radius: 50%;
+      transition: background-color 0.6s ease; }
+      .reviews .dots a:active, .reviews .dots a:hover {
+        background-color: #f25f3a; }
+      .reviews .dots a:focus {
+        background-color: greenyellow; }
