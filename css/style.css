@@ -173,15 +173,16 @@ nav {
     @media screen and (min-width: 920px) {
       .reviews__wrapper {
         margin: 0 auto 1.5rem; } }
+    @media screen and (min-width: 1078px) {
+      .reviews__wrapper {
+        padding-bottom: 1.5rem; } }
     .reviews__wrapper .card {
       position: relative;
       scroll-snap-align: start;
       flex-shrink: 0;
       width: 100%;
       margin-right: 3rem;
-      transform-origin: center center;
-      transform: scale(1);
-      transition: transform 0.5s; }
+      transition: transform 0.3s ease, -webkit-transform 0.3s ease; }
       @media screen and (min-width: 1078px) {
         .reviews__wrapper .card {
           width: 33.3%;
@@ -197,10 +198,16 @@ nav {
         background: #fafafa;
         padding: 3.2rem 1rem 2rem;
         width: 100%; }
+        @media screen and (min-width: 1236px) and (max-width: 1430px) {
+          .reviews__wrapper .card .testimonial {
+            height: 14.5rem; } }
   .reviews .dots {
     display: flex;
     justify-content: center;
     padding-bottom: 3rem; }
+    @media screen and (min-width: 1078px) {
+      .reviews .dots {
+        display: none; } }
     .reviews .dots a {
       cursor: pointer;
       height: 0.8rem;
