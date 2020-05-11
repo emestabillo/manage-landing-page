@@ -5,6 +5,7 @@
 $color-bright-red: hsl(12, 88%, 59%);
 $color-light-red: #fff0ec;
 $color-dark-blue: hsl(228, 39%, 23%);
+$color-error: #e74c3c;
 
 //Neutrals
 $color-gray-blue: hsl(227, 12%, 61%);
@@ -19,10 +20,12 @@ $color-light-gray: hsl(0, 0%, 98%);
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  // transition: all 0.3s;
 }
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
   @media screen and (max-width: 839px) {
     font-size: 87.5%;
   }
@@ -49,19 +52,47 @@ body {
 
   &--header,
   &--reviews,
+  &--action,
+  &--email {
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  &--header,
+  &--reviews,
   &--action {
     width: 10rem;
     height: 3.2rem;
     font-size: 0.9rem;
-    font-weight: 700;
     box-shadow: 0px 12px 13px -10px rgba(242, 95, 58, 1);
+  }
+
+  &--header,
+  &--reviews,
+  &--email {
+    &:hover {
+      background: lighten($color-bright-red, 12%);
+      border: 1px solid lighten($color-bright-red, 12%);
+    }
   }
 
   &--action {
     background-color: $color-light-red;
     color: $color-bright-red;
+    &:hover {
+      color: lighten($color-bright-red, 12%);
+    }
     @media screen and (min-width: 920px) {
       align-self: center;
+    }
+  }
+
+  &--email {
+    width: 5.5rem;
+    height: 2.8rem;
+
+    @media screen and (min-width: 600px) {
+      width: 6.5rem;
     }
   }
 }
