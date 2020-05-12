@@ -344,7 +344,7 @@ footer {
   grid-template-rows: 1fr 3fr 2fr 1fr;
   grid-row-gap: 2rem;
   grid-template-areas: "email" "menu" "social" "copyright";
-  align-items: center;
+  // align-items: center;
 
   background: $color-darker-blue;
   color: $color-light-gray;
@@ -386,19 +386,44 @@ footer {
     display: flex;
     justify-content: space-around;
 
-    &__left,
-    &__right {
-      // width: 50%;
+    li {
+      list-style: none;
+      padding-bottom: 1rem;
+      cursor: pointer;
 
-      li {
-        list-style: none;
-        padding-bottom: 1rem;
-        cursor: pointer;
-
-        &:hover {
-          color: $color-bright-red;
-        }
+      &:hover {
+        color: $color-bright-red;
       }
     }
+  }
+  .social {
+    grid-area: social;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .icons {
+      display: flex;
+      justify-content: space-between;
+      // align-self: flex-start;
+
+      img {
+        cursor: pointer;
+        width: 2.2rem;
+        height: 2.2rem;
+      }
+      .size {
+        width: 2.3rem;
+      }
+    }
+
+    .logo {
+      width: 12rem;
+      height: 2rem;
+      align-self: center;
+    }
+  }
+  .copyright {
+    align-self: flex-end;
+    justify-self: center;
   }
 }
