@@ -16,7 +16,7 @@ body {
   font-family: "Be Vietnam", sans-serif; }
 
 .container {
-  max-width: 1440px;
+  max-width: 90rem;
   margin: 0 auto; }
   @media screen and (min-width: 1440px) {
     .container {
@@ -121,7 +121,7 @@ nav {
     color: #242d52; }
     @media screen and (min-width: 920px) {
       .hero__text .title {
-        font-size: 2.3rem; } }
+        font-size: 3rem; } }
   .hero__text p {
     padding-top: 0.5rem;
     padding-bottom: 1.5rem; }
@@ -301,6 +301,12 @@ footer {
   padding: 3rem 8vw;
   position: relative;
   z-index: 2; }
+  @media screen and (min-width: 920px) {
+    footer {
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 3fr 5fr 5fr;
+      grid-template-areas: "social menu email" "social menu copyright";
+      column-gap: 2rem; } }
   footer form {
     grid-area: email;
     display: flex;
@@ -315,9 +321,12 @@ footer {
       border: none;
       padding-left: 1.5rem;
       font-size: 0.9rem;
-      color: #1d1e25;
+      color: #9095a7;
       margin-right: 0.5rem;
       outline: none; }
+      @media screen and (min-width: 920px) {
+        footer form input {
+          width: 20vw; } }
     footer form small {
       color: #e74c3c;
       position: absolute;
@@ -326,6 +335,11 @@ footer {
     grid-area: menu;
     display: flex;
     justify-content: space-around; }
+    @media screen and (max-width: 919px) {
+      footer .footer-menu {
+        width: 100%;
+        max-width: 35rem;
+        margin: 0 auto; } }
     footer .footer-menu li {
       list-style: none;
       padding-bottom: 1rem;
@@ -339,17 +353,51 @@ footer {
     justify-content: space-between; }
     footer .social .icons {
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-between;
+      width: 100%;
+      margin: 0 auto; }
+      @media screen and (max-width: 919px) {
+        footer .social .icons {
+          max-width: 35rem; } }
+      @media screen and (min-width: 920px) {
+        footer .social .icons {
+          order: 2;
+          max-width: 13rem; } }
       footer .social .icons img {
         cursor: pointer;
         width: 2.2rem;
         height: 2.2rem; }
+        @media screen and (min-width: 920px) {
+          footer .social .icons img {
+            height: 1.5rem;
+            width: 1.5rem; } }
       footer .social .icons .size {
         width: 2.3rem; }
+        @media screen and (min-width: 920px) {
+          footer .social .icons .size {
+            width: 1.5rem; } }
     footer .social .logo {
       width: 12rem;
       height: 2rem;
       align-self: center; }
+      @media screen and (min-width: 920px) and (max-width: 1081px) {
+        footer .social .logo {
+          height: 1.7rem;
+          width: 10rem; } }
   footer .copyright {
+    grid-area: copyright;
     align-self: flex-end;
-    justify-self: center; }
+    justify-self: center;
+    font-size: 0.9rem; }
+    @media screen and (min-width: 920px) {
+      footer .copyright {
+        justify-self: flex-end; } }
+  footer .attribution {
+    font-size: 11px;
+    text-align: center; }
+    @media screen and (min-width: 920px) {
+      footer .attribution {
+        grid-column: 1/-1; } }
+  footer .attribution a {
+    color: #909fda;
+    text-decoration: none; }
