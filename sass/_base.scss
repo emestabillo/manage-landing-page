@@ -1,5 +1,4 @@
-// - Mobile: 375px
-// - Desktop: 1440px
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap");
 
 //COLORS: Primary
 $color-bright-red: hsl(12, 88%, 59%);
@@ -35,73 +34,6 @@ body {
   font-family: "Be Vietnam", sans-serif;
 }
 
-.container {
-  max-width: 90rem; //1440px
-  // height: 164.94rem; //2639px
-  margin: 0 auto;
-  @media screen and (min-width: 1440px) {
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  }
-}
-
-.cta,
-.feature-number {
-  border-radius: 2.5rem;
-  border: 1px solid $color-bright-red;
-  background: $color-bright-red;
-  color: $color-light-gray;
-
-  &--header,
-  &--reviews,
-  &--action,
-  &--email {
-    font-weight: 700;
-    cursor: pointer;
-  }
-
-  &--header,
-  &--reviews,
-  &--action {
-    width: 10rem;
-    height: 3.2rem;
-    font-size: 0.9rem;
-    box-shadow: 0px 12px 13px -10px rgba(242, 95, 58, 1);
-  }
-
-  &--header,
-  &--reviews,
-  &--email {
-    &:hover {
-      background: lighten($color-bright-red, 12%);
-      border: 1px solid lighten($color-bright-red, 12%);
-    }
-  }
-
-  &--action {
-    background-color: $color-light-red;
-    color: $color-bright-red;
-    &:hover {
-      color: lighten($color-bright-red, 12%);
-    }
-    @media screen and (min-width: 920px) {
-      align-self: center;
-    }
-  }
-
-  &--email {
-    width: 5.5rem;
-    height: 2.8rem;
-
-    @media screen and (min-width: 600px) {
-      width: 6.5rem;
-    }
-  }
-}
-
-img {
-  max-width: 100%;
-}
-
 h1,
 h3 {
   color: $color-dark-blue;
@@ -109,5 +41,9 @@ h3 {
 
 p {
   color: $color-gray-blue;
-  line-height: 2;
+  // line-height: 2;
+}
+
+img {
+  max-width: 100%;
 }
