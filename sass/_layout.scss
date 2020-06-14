@@ -43,14 +43,14 @@ nav {
       transform: scale(0.8);
     }
   }
+
   ul {
-    // display: none;
-    list-style: none;
     position: absolute;
+    list-style: none;
     top: 10rem;
     left: 2rem;
     right: 2rem;
-    overflow: auto;
+    // overflow: hidden;
     transition: all 0.3s ease-in-out;
     transform: scale(0);
     background: #fff;
@@ -58,13 +58,25 @@ nav {
     text-align: center;
     padding: 4rem 0;
     font-weight: 700;
-    :not(:last-child) {
-      padding-bottom: 2rem;
-      li {
-        // :not(:first-child) {
-        //   padding-bottom: 1.7rem;
+    border-radius: 1rem;
+    z-index: 10;
+    a {
+      text-decoration: none;
+      color: $color-darker-blue;
+      font-size: 1.8rem;
+      &:hover {
+        color: $color-gray-blue;
       }
     }
+
+    // @media screen and (min-width: 992px) {
+    //   display: flex;
+    // }
+
+    :not(:last-child) {
+      padding-bottom: 2rem;
+    }
+
     a {
       text-decoration: none;
       color: $color-darker-blue;
@@ -85,10 +97,9 @@ nav {
 }
 
 .hamburger {
-  // height: 1.8rem;
-  // width: 2.5rem;
   margin-top: 0.6rem;
   z-index: 5;
+  cursor: pointer;
 
   @media screen and (min-width: 992px) {
     display: none;
@@ -99,38 +110,47 @@ nav {
   &__icon::after {
     height: 0.4rem;
     width: 2.5rem;
+    display: block;
     background: $color-darker-blue;
     transition: all 0.3s ease-in-out;
   }
 
   &__icon {
     position: relative;
-    display: block;
-
     transition: all 0.3s ease-in-out;
 
     &::before,
     &::after {
       position: absolute;
       content: "";
-      display: block;
-    }
-
-    &::before {
       top: -0.8rem;
     }
+
     &::after {
       top: 0.8rem;
     }
   }
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 400ms ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  // background-image: linear-gradient(to bottom, #fbfbfb, #b1b1b1, #696969);
+  width: 100%;
+}
+
 #toggle:checked ~ .hamburger .hamburger__icon {
   transform: rotate(45deg);
-  // margin-top: -7px;
 }
+
 #toggle:checked ~ .hamburger .hamburger__icon::before {
   transform: rotate(-90deg);
-  // margin-top: 25px;
   top: -0.1rem;
 }
 #toggle:checked ~ .hamburger .hamburger__icon::after {
@@ -138,10 +158,13 @@ nav {
   transform: rotate(45deg);
 }
 
+#toggle:checked ~ .overlay {
+  opacity: 1;
+  pointer-events: all;
+}
+
 #toggle:checked ~ ul {
-  // top: 0;
   transform: scale(1);
-  // display: block;
 }
 
 .hero {

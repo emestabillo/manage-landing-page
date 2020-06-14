@@ -108,19 +108,26 @@ nav {
     nav .brand img {
       transform: scale(0.8); }
   nav ul {
-    list-style: none;
     position: absolute;
+    list-style: none;
     top: 10rem;
     left: 2rem;
     right: 2rem;
-    overflow: auto;
     transition: all 0.3s ease-in-out;
     transform: scale(0);
     background: #fff;
     transform-origin: top right;
     text-align: center;
     padding: 4rem 0;
-    font-weight: 700; }
+    font-weight: 700;
+    border-radius: 1rem;
+    z-index: 10; }
+    nav ul a {
+      text-decoration: none;
+      color: #1d1e25;
+      font-size: 1.8rem; }
+      nav ul a:hover {
+        color: #9095a7; }
     nav ul :not(:last-child) {
       padding-bottom: 2rem; }
     nav ul a {
@@ -138,27 +145,37 @@ nav {
 
 .hamburger {
   margin-top: 0.6rem;
-  z-index: 5; }
+  z-index: 5;
+  cursor: pointer; }
   @media screen and (min-width: 992px) {
     .hamburger {
       display: none; } }
   .hamburger__icon, .hamburger__icon::before, .hamburger__icon::after {
     height: 0.4rem;
     width: 2.5rem;
+    display: block;
     background: #1d1e25;
     transition: all 0.3s ease-in-out; }
   .hamburger__icon {
     position: relative;
-    display: block;
     transition: all 0.3s ease-in-out; }
     .hamburger__icon::before, .hamburger__icon::after {
       position: absolute;
       content: "";
-      display: block; }
-    .hamburger__icon::before {
       top: -0.8rem; }
     .hamburger__icon::after {
       top: 0.8rem; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 400ms ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%; }
 
 #toggle:checked ~ .hamburger .hamburger__icon {
   transform: rotate(45deg); }
@@ -170,6 +187,10 @@ nav {
 #toggle:checked ~ .hamburger .hamburger__icon::after {
   opacity: 0;
   transform: rotate(45deg); }
+
+#toggle:checked ~ .overlay {
+  opacity: 1;
+  pointer-events: all; }
 
 #toggle:checked ~ ul {
   transform: scale(1); }
