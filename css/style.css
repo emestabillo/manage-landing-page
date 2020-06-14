@@ -8,10 +8,8 @@
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth; }
-  @media screen and (max-width: 839px) {
-    html {
-      font-size: 87.5%; } }
+  scroll-behavior: smooth;
+  font-size: 62.5%; }
 
 body {
   font-family: "Be Vietnam", sans-serif; }
@@ -87,17 +85,10 @@ img {
       .feature-number--email {
         width: 6.5rem; } }
 
-.container {
-  max-width: 90rem;
-  margin: 0 auto; }
-  @media screen and (min-width: 1441px) {
-    .container {
-      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); } }
-
 header {
   background: url(/images/bg-tablet-pattern.svg) top -2rem right -5rem no-repeat;
   background-size: 100%;
-  padding: 3rem 8vw 5rem; }
+  padding: 0 2.4rem; }
   @media screen and (min-width: 600px) {
     header {
       background-size: 77%; } }
@@ -108,35 +99,80 @@ header {
     header {
       padding: 3.4rem 11.5vw 6.5rem; } }
 
-.hamburger {
-  background: url(/images/icon-hamburger.svg);
-  height: 18px;
-  width: 20px;
-  display: block; }
-  @media screen and (min-width: 992px) {
-    .hamburger {
-      display: none; } }
-
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  padding: 4.2rem 2.5rem 1.5rem 0.8rem; }
   nav .brand {
     align-self: flex-end; }
+    nav .brand img {
+      transform: scale(0.8); }
   nav ul {
-    display: none;
-    list-style: none; }
-    nav ul li {
-      padding: 0 1rem; }
+    list-style: none;
+    position: absolute;
+    top: 10rem;
+    left: 2rem;
+    right: 2rem;
+    overflow: auto;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0);
+    background: #fff;
+    transform-origin: top right;
+    text-align: center;
+    padding: 4rem 0;
+    font-weight: 700; }
+    nav ul :not(:last-child) {
+      padding-bottom: 2rem; }
     nav ul a {
       text-decoration: none;
       color: #1d1e25;
-      font-size: 0.8rem; }
+      font-size: 1.8rem; }
       nav ul a:hover {
         color: #9095a7; }
     @media screen and (min-width: 992px) {
       nav ul {
         display: flex; } }
+
+#toggle {
+  display: none; }
+
+.hamburger {
+  margin-top: 0.6rem;
+  z-index: 5; }
+  @media screen and (min-width: 992px) {
+    .hamburger {
+      display: none; } }
+  .hamburger__icon, .hamburger__icon::before, .hamburger__icon::after {
+    height: 0.4rem;
+    width: 2.5rem;
+    background: #1d1e25;
+    transition: all 0.3s ease-in-out; }
+  .hamburger__icon {
+    position: relative;
+    display: block;
+    transition: all 0.3s ease-in-out; }
+    .hamburger__icon::before, .hamburger__icon::after {
+      position: absolute;
+      content: "";
+      display: block; }
+    .hamburger__icon::before {
+      top: -0.8rem; }
+    .hamburger__icon::after {
+      top: 0.8rem; }
+
+#toggle:checked ~ .hamburger .hamburger__icon {
+  transform: rotate(45deg); }
+
+#toggle:checked ~ .hamburger .hamburger__icon::before {
+  transform: rotate(-90deg);
+  top: -0.1rem; }
+
+#toggle:checked ~ .hamburger .hamburger__icon::after {
+  opacity: 0;
+  transform: rotate(45deg); }
+
+#toggle:checked ~ ul {
+  transform: scale(1); }
 
 .hero {
   padding-top: 3rem; }
