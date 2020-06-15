@@ -43,9 +43,10 @@ img {
   .feature-number--header,
   .feature-number--reviews,
   .feature-number--action {
-    width: 8.4rem;
-    height: 2.9rem;
-    font-size: 0.8rem;
+    width: 13.5rem;
+    height: 4.2rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
     box-shadow: 0px 12px 13px -10px #f25f3a; }
   .cta--nav:hover, .cta--header:hover, .cta--reviews:hover, .cta--email:hover,
   .feature-number--nav:hover,
@@ -61,10 +62,13 @@ img {
       .cta--nav,
       .feature-number--nav {
         display: block; } }
-  @media screen and (min-width: 992px) {
-    .cta--header,
-    .feature-number--header {
-      align-self: flex-end; } }
+  .cta--header,
+  .feature-number--header {
+    margin-top: 1.5rem; }
+    @media screen and (min-width: 992px) {
+      .cta--header,
+      .feature-number--header {
+        align-self: flex-end; } }
   .cta--action,
   .feature-number--action {
     background-color: #fff0ec;
@@ -196,46 +200,21 @@ nav {
   transform: scale(1); }
 
 .hero {
-  padding-top: 3rem; }
-  @media screen and (min-width: 920px) {
-    .hero {
-      padding-top: 7.6rem;
-      display: flex;
-      justify-content: space-between; } }
-  @media screen and (min-width: 920px) {
-    .hero__image {
-      order: 2;
-      flex: 1; } }
+  padding-top: 2.7rem; }
   .hero__image img {
     display: block;
     margin: 0 auto; }
   .hero__text {
+    padding-top: 1rem;
     text-align: center; }
-    @media screen and (min-width: 920px) {
-      .hero__text {
-        display: grid;
-        grid-template-rows: 12rem 5rem 5rem;
-        row-gap: 1rem;
-        text-align: left;
-        flex: 1;
-        padding-top: 3.2rem; } }
     .hero__text .title {
-      font-size: 2.6rem;
-      color: #242d52; }
-      @media screen and (min-width: 920px) {
-        .hero__text .title {
-          font-size: 3rem;
-          line-height: 1.2; } }
-      @media screen and (min-width: 1125px) {
-        .hero__text .title {
-          font-size: 3.3rem; } }
+      font-size: 3.7rem;
+      color: #242d52;
+      line-height: 1.4; }
     .hero__text .subtitle {
-      padding-top: 0.5rem;
-      padding-bottom: 1.5rem; }
-      @media screen and (min-width: 920px) {
-        .hero__text .subtitle {
-          line-height: 1.5;
-          padding: 1rem 15vw 2rem 0; } }
+      font-size: 1.5rem;
+      padding: 0.8rem 1.4rem 1.5rem;
+      line-height: 1.8; }
 
 .features {
   padding: 3rem 8vw 5rem; }
