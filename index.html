@@ -15,54 +15,60 @@
     <title>Frontend Mentor | Manage landing page</title>
   </head>
   <body>
-    <nav>
-      <div class="brand">
-        <a href="index.html">
-          <img src="/images/logo.svg" alt="manage landing page logo" />
-        </a>
-      </div>
-      <input id="toggle" type="checkbox"></input>
-      <label for="toggle" class="hamburger">
-        <span class="hamburger__icon"></span>
-      </label>
-        <ul>
-          <li>
-            <a href="#">Pricing</a>
-          </li>
-          <li>
-            <a href="#">Product</a>
-          </li>
-          <li>
-            <a href="#">About Us</a>
-          </li>
-          <li>
-            <a href="#">Careers</a>
-          </li>
-          <li>
-            <a href="#">Community</a>
-          </li>
-        </ul>
-      <button class="cta cta--nav">Get Started</button>
-      <div class="overlay"></div>
-    </nav>
     <header>
+      <div class="container">
+        <nav>
+          <div class="brand">
+            <a href="index.html">
+              <img src="/images/logo.svg" alt="manage landing page logo" />
+            </a>
+          </div>
+          <input id="toggle" type="checkbox"></input>
+          <label for="toggle" class="hamburger">
+            <span class="hamburger__icon"></span>
+          </label>
+          <ul>
+            <li>
+              <a href="#">Pricing</a>
+            </li>
+            <li>
+              <a href="#">Product</a>
+            </li>
+            <li>
+              <a href="#">About Us</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Community</a>
+            </li>
+          </ul>
+          <button class="cta cta--nav">Get Started</button>
+          <div class="overlay"></div>
+      </div>
+      
+       
+      </nav>
       <section class="hero">
-        <figure class="hero__image">
-          <img src="/images/illustration-intro.svg" alt="graph-chart-data" />
-        </figure>
-        <div class="hero__text">
-          <h1 class="title">
-            Bring everyone together to build better products.
-          </h1>
-          <p class="subtitle">
-            Manage makes it simple for software teams to plan day-to-day tasks
-            while keeping the larger team goals in view.
-          </p>
-          <button class="cta cta--header">Get Started</button>
+        <div class="container">
+          <figure class="hero__image">
+            <img src="/images/illustration-intro.svg" alt="graph-chart-data" />
+          </figure>
+          <div class="hero__text">
+            <h1 class="title">
+              Bring everyone together to build better products.
+            </h1>
+            <p class="subtitle">
+              Manage makes it simple for software teams to plan day-to-day tasks
+              while keeping the larger team goals in view.
+            </p>
+            <button class="cta cta--header">Get Started</button>
+          </div>
         </div>
       </section>
     </header>
-    <!-- <section class="features">
+    <section class="features">
       <div class="features__text">
         <h1>What's different about Manage?</h1>
         <p>
@@ -111,7 +117,7 @@
       </div>
     </section>
   
-    <section class="reviews">
+    <!-- <section class="reviews">
       <h2>What they've said</h2>
       <div class="reviews__wrapper">
         <div class="card" id="card-1">
