@@ -57,6 +57,12 @@ body {
       background-position: top -20% right -10rem, top 60% right -25rem;
       background-size: 75%, 60%;
     }
+    @media screen and (min-width: 992px) {
+      // background-size: 73%, 60%;
+      // background-position: top -54% right -41rem, top 201% left -25rem;
+      background-size: 814px 814px, 60%;
+      background-position: top -18rem right -19rem, top 201% left -25rem;
+    }
   }
 
   @media screen and (min-width: 1441px) {
