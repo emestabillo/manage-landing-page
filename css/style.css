@@ -47,6 +47,10 @@ h3 {
 
 p {
   color: #9095a7; }
+  @media screen and (min-width: 992px) {
+    p {
+      font-size: 1.7rem;
+      line-height: 1.6; } }
 
 img {
   max-width: 100%; }
@@ -79,7 +83,7 @@ img {
     margin-top: 1.5rem; }
     @media screen and (min-width: 992px) {
       .cta--header {
-        align-self: flex-end; } }
+        align-self: center; } }
   .cta--action {
     background-color: #fff0ec;
     color: #f25f3a; }
@@ -226,23 +230,27 @@ nav {
   padding-top: 2.7rem; }
   @media screen and (min-width: 992px) {
     .hero__wrapper {
-      display: flex; } }
+      display: flex;
+      margin-top: 9rem; } }
   @media screen and (min-width: 992px) {
     .hero__image {
       order: 2;
-      flex: 1;
-      margin-top: 9.5rem; } }
+      flex: 1; } }
   .hero__image img {
     display: block;
     margin: 0 auto; }
   .hero__text {
     padding-top: 1rem;
     text-align: center; }
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 920px) {
       .hero__text {
-        flex: 1;
+        display: grid;
+        grid-template-rows: 21rem 9rem 8rem;
+        row-gap: 1rem;
         text-align: left;
-        margin-top: 13.3rem; } }
+        flex: 1;
+        padding-top: 0;
+        align-self: center; } }
     .hero__text .title {
       font-size: 3.7rem;
       color: #242d52;
@@ -250,8 +258,7 @@ nav {
       @media screen and (min-width: 992px) {
         .hero__text .title {
           font-size: 5.5rem;
-          line-height: 1.2;
-          padding-bottom: 2.5rem; } }
+          line-height: 1.2; } }
     .hero__text .subtitle {
       font-size: 1.5rem;
       padding: 0.8rem 1.4rem 1.5rem;
@@ -261,14 +268,13 @@ nav {
           padding-left: 0;
           padding-right: 18rem;
           font-size: 1.7rem;
-          line-height: 1.6;
-          padding-bottom: 2rem; } }
+          line-height: 1.6; } }
 
 .features {
   padding: 3rem 0 5rem; }
   @media screen and (min-width: 992px) {
     .features {
-      padding-top: 4.5rem; } }
+      padding-top: 5rem; } }
   @media screen and (min-width: 992px) {
     .features__wrapper {
       display: flex; } }
@@ -285,23 +291,28 @@ nav {
     @media screen and (min-width: 992px) {
       .features h1 {
         font-size: 4rem;
-        line-height: 1.1; } }
+        line-height: 1.1;
+        padding-bottom: 3rem; } }
   .features p {
     font-size: 1.5rem;
     line-height: 1.8; }
     @media screen and (min-width: 992px) {
       .features p {
-        font-size: 1.7rem;
-        padding-right: 13vw;
-        line-height: 1.6; } }
+        font-size: 1.6rem;
+        padding-right: 15vw;
+        line-height: 1.7; } }
   @media screen and (max-width: 991px) {
     .features__list {
       margin: 0 -2.4rem 0 -1rem; } }
   @media screen and (min-width: 920px) {
     .features__list {
-      flex: 1; } }
+      flex: 1;
+      padding-left: 3rem; } }
   .features__item {
     padding-bottom: 5.2rem; }
+    @media screen and (min-width: 992px) {
+      .features__item {
+        padding-bottom: 3.8rem; } }
     .features__item .heading {
       display: flex;
       background: #fff0ec; }
@@ -319,8 +330,15 @@ nav {
         padding-left: 1.2rem;
         padding-top: 0.6rem;
         font-size: 1.6rem; }
-    .features__item p {
+        @media screen and (min-width: 992px) {
+          .features__item .heading .benefit {
+            padding-left: 2.8rem; } }
+    .features__item .details {
       padding-top: 0.8rem; }
+      @media screen and (min-width: 992px) {
+        .features__item .details {
+          padding-right: 0;
+          padding-left: 9.2rem; } }
 
 .reviews {
   text-align: center;
@@ -542,12 +560,3 @@ footer {
     @media screen and (min-width: 920px) {
       footer .copyright {
         justify-self: flex-end; } }
-  footer .attribution {
-    font-size: 11px;
-    text-align: center; }
-    @media screen and (min-width: 920px) {
-      footer .attribution {
-        grid-column: 1/-1; } }
-  footer .attribution a {
-    color: #909fda;
-    text-decoration: none; }

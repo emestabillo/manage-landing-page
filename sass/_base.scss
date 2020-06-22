@@ -77,7 +77,10 @@ h3 {
 
 p {
   color: $color-gray-blue;
-  // line-height: 2;
+  @media screen and (min-width: 992px) {
+    font-size: 1.7rem;
+    line-height: 1.6;
+  }
 }
 
 img {
