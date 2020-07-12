@@ -128,10 +128,15 @@ nav {
   top: 0;
   right: 0;
   bottom: 0;
-  // z-index: 1;
   opacity: 0;
   transition: opacity 400ms ease;
-  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  background: linear-gradient(
+    27deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  // background-color: rgba(0, 0, 0, 0.5);
   // background-image: linear-gradient(to bottom, #fbfbfb, #b1b1b1, #696969);
   // width: 100%;
 }
@@ -159,9 +164,12 @@ nav {
   transform: scale(1);
 }
 
+.stop-scroll {
+  overflow: hidden;
+}
 //////////////////
 ///HERO SECTION//
-/////////////////s
+/////////////////
 .hero {
   margin: 0 auto;
   padding-top: 2.7rem;
@@ -242,7 +250,7 @@ nav {
   padding: 3rem 0 1rem;
 
   @media screen and (min-width: 992px) {
-    padding-top: 5rem;
+    padding: 5rem 0;
   }
 
   &__wrapper {
@@ -296,6 +304,7 @@ nav {
 
     @media screen and (min-width: 992px) {
       padding-bottom: 3.8rem;
+      padding-right: 1rem;
     }
 
     .heading {
@@ -343,13 +352,19 @@ nav {
   text-align: center;
   padding: 0 8vw 5rem;
   overflow: hidden;
-  @media screen and (min-width: 1078px) {
-    padding: 0 0 5rem;
+  @media screen and (min-width: 992px) {
+    padding: 5rem 0;
   }
+  // @media screen and (min-width: 1078px) {
+  //   padding: 0 0 5rem;
+  // }
 
   h2 {
     font-size: 3rem;
     padding-bottom: 4rem;
+    @media screen and (min-width: 992px) {
+      font-size: 4rem;
+    }
   }
   .swiper-container {
     width: 100%;
@@ -366,17 +381,8 @@ nav {
     background: #fff;
 
     /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center;
 
     .card {
@@ -436,6 +442,10 @@ nav {
 
       p {
         line-height: 1.8;
+        padding: 0 0.5rem;
+        @media screen and (min-width: 992px) {
+          font-size: 1.6rem;
+        }
       }
     }
   }

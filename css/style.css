@@ -204,7 +204,8 @@ nav {
   bottom: 0;
   opacity: 0;
   transition: opacity 400ms ease;
-  background-color: rgba(0, 0, 0, 0.5); }
+  height: 100vh;
+  background: linear-gradient(27deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%); }
 
 #toggle:checked ~ .hamburger .hamburger__icon {
   transform: rotate(45deg); }
@@ -224,6 +225,9 @@ nav {
 
 #toggle:checked ~ ul {
   transform: scale(1); }
+
+.stop-scroll {
+  overflow: hidden; }
 
 .hero {
   margin: 0 auto;
@@ -274,7 +278,7 @@ nav {
   padding: 3rem 0 1rem; }
   @media screen and (min-width: 992px) {
     .features {
-      padding-top: 5rem; } }
+      padding: 5rem 0; } }
   @media screen and (min-width: 992px) {
     .features__wrapper {
       display: flex; } }
@@ -312,7 +316,8 @@ nav {
     padding-bottom: 5.2rem; }
     @media screen and (min-width: 992px) {
       .features__item {
-        padding-bottom: 3.8rem; } }
+        padding-bottom: 3.8rem;
+        padding-right: 1rem; } }
     .features__item .heading {
       display: flex;
       background: #fff0ec; }
@@ -344,12 +349,15 @@ nav {
   text-align: center;
   padding: 0 8vw 5rem;
   overflow: hidden; }
-  @media screen and (min-width: 1078px) {
+  @media screen and (min-width: 992px) {
     .reviews {
-      padding: 0 0 5rem; } }
+      padding: 5rem 0; } }
   .reviews h2 {
     font-size: 3rem;
     padding-bottom: 4rem; }
+    @media screen and (min-width: 992px) {
+      .reviews h2 {
+        font-size: 4rem; } }
   .reviews .swiper-container {
     width: 100%;
     height: 100%; }
@@ -360,17 +368,8 @@ nav {
     font-size: 1.5rem;
     background: #fff;
     /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
     align-items: center; }
     .reviews .swiper-slide .card {
       flex-shrink: 0;
@@ -392,7 +391,11 @@ nav {
       .reviews .swiper-slide .testimonial h4 {
         padding-bottom: 2rem; }
       .reviews .swiper-slide .testimonial p {
-        line-height: 1.8; }
+        line-height: 1.8;
+        padding: 0 0.5rem; }
+        @media screen and (min-width: 992px) {
+          .reviews .swiper-slide .testimonial p {
+            font-size: 1.6rem; } }
 
 .action {
   display: flex;
