@@ -11,20 +11,23 @@ let swiper = new Swiper(".swiper-container", {
   slidesPerView: 1,
   spaceBetween: 32,
   speed: 1000,
-  // autoplay: {
-  //   delay: 4500,
-  //   disableOnInteraction: false,
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
+  // scrollbar: {
+  //   el: ".swiper-scrollbar",
   // },
-  // breakpoints: {
-  //   768: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 30,
-  //   },
-  //   992: {
-  //     slidesPerView: 2.8,
-  //     spaceBetween: 35,
-  //   },
-  // },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    992: {
+      slidesPerView: 2.8,
+      spaceBetween: 35,
+    },
+  },
   loop: true,
   pagination: {
     el: ".swiper-pagination",
