@@ -15,9 +15,6 @@ let swiper = new Swiper(".swiper-container", {
     delay: 4500,
     disableOnInteraction: false,
   },
-  // scrollbar: {
-  //   el: ".swiper-scrollbar",
-  // },
   breakpoints: {
     768: {
       slidesPerView: 2,
