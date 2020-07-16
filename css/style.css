@@ -157,21 +157,22 @@ nav {
         position: static;
         padding: 0;
         background: transparent; } }
-    @media screen and (max-width: 991px) {
-      nav ul :not(:last-child) {
-        padding-bottom: 2rem; } }
     @media screen and (min-width: 992px) {
       nav ul li {
         padding-right: 3.2rem; } }
     nav ul li a {
       text-decoration: none;
       color: #1d1e25;
-      font-size: 1.8rem; }
+      font-size: 1.8rem;
+      padding-bottom: 2rem;
+      display: block; }
       nav ul li a:hover {
         color: #9095a7; }
       @media screen and (min-width: 992px) {
         nav ul li a {
           font-size: 1.3rem; } }
+    nav ul li:last-child a {
+      padding-bottom: 0; }
 
 #toggle {
   display: none; }
@@ -376,6 +377,8 @@ nav {
 > .swiper-pagination-bullets
 .swiper-pagination-bullet {
         display: none; } }
+  .reviews .swiper-pagination-bullet:focus {
+    outline: none; }
   .reviews .swiper-slide {
     text-align: center;
     font-size: 1.4rem;
