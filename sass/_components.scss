@@ -34,16 +34,6 @@
     box-shadow: 0px 12px 13px -10px #f25f3a;
   }
 
-  // &--nav,
-  // &--header,
-  // &--reviews,
-  // &--email {
-  //   &:hover {
-  //     background: lighten($color-bright-red, 12%);
-  //     border: 1px solid lighten($color-bright-red, 12%);
-  //   }
-  // }
-
   &--nav {
     display: none;
     @media screen and (min-width: 992px) {
@@ -77,8 +67,8 @@
   }
 
   &--email {
-    width: 5.5rem;
-    height: 2.8rem;
+    width: 8rem;
+    height: 4.5rem;
 
     @media screen and (min-width: 600px) {
       width: 6.5rem;
