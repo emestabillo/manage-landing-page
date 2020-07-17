@@ -1,3 +1,9 @@
 @import "base";
 @import "components";
-@import "layout";
+
+@import "layout/navigation";
+@import "layout/header";
+@import "layout/features";
+@import "layout/testimonials";
+@import "layout/action";
+@import "layout/footer";

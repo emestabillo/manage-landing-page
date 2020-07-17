@@ -85,7 +85,7 @@ img {
       .cta--header {
         align-self: center; } }
   .cta--reviews {
-    margin-top: 3.2rem; }
+    margin-top: 3.6rem; }
     @media screen and (min-width: 992px) {
       .cta--reviews {
         margin-top: 1.6rem; } }
@@ -110,9 +110,6 @@ img {
   padding: 0 2.4rem;
   margin: 0 auto;
   height: inherit; }
-
-header {
-  padding: 4.2rem 0 6.5rem; }
 
 nav {
   display: flex;
@@ -171,8 +168,9 @@ nav {
       @media screen and (min-width: 992px) {
         nav ul li a {
           font-size: 1.3rem; } }
-    nav ul li:last-child a {
-      padding-bottom: 0; }
+    @media screen and (max-width: 991px) {
+      nav ul li:last-child a {
+        padding-bottom: 0; } }
 
 #toggle {
   display: none; }
@@ -231,6 +229,9 @@ nav {
 
 .stop-scroll {
   overflow: hidden; }
+
+header {
+  padding: 4.2rem 0 6.5rem; }
 
 .hero {
   margin: 0 auto;
@@ -350,7 +351,7 @@ nav {
 
 .reviews {
   text-align: center;
-  padding: 0 8vw 5rem;
+  padding: 0 8vw 4.4rem;
   overflow: hidden; }
   @media screen and (min-width: 992px) {
     .reviews {
@@ -383,7 +384,7 @@ nav {
     text-align: center;
     font-size: 1.4rem;
     background: #fff;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.6rem;
     /* Center slide text vertically */
     display: flex;
     justify-content: center;
@@ -415,17 +416,19 @@ nav {
       .reviews .swiper-slide .testimonial h4 {
         padding-bottom: 2rem; }
       .reviews .swiper-slide .testimonial p {
-        line-height: 2;
+        line-height: 1.9;
         padding: 0 0.8rem; }
         @media screen and (min-width: 992px) {
           .reviews .swiper-slide .testimonial p {
             line-height: 1.6; } }
 
 .action {
-  padding: 8rem 0;
+  padding: 9rem 0;
   background: #f25f3a;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  line-height: 1.3;
+  overflow: hidden; }
   @media screen and (min-width: 992px) {
     .action {
       display: flex;
@@ -449,7 +452,7 @@ nav {
     text-align: center;
     font-size: 4rem;
     color: #fafafa;
-    padding-bottom: 4.8rem; }
+    padding-bottom: 2.4rem; }
     @media screen and (min-width: 920px) {
       .action h1 {
         width: 50%;
@@ -457,103 +460,104 @@ nav {
         text-align: left; } }
 
 footer {
-  display: grid;
-  grid-template-rows: 1fr 3fr 2fr 1fr;
-  grid-row-gap: 2rem;
-  grid-template-areas: "email" "menu" "social" "copyright";
   background: #1d1e25;
   color: #fafafa;
-  padding: 3rem 8vw;
-  position: relative;
-  z-index: 2; }
-  @media screen and (min-width: 920px) {
-    footer {
-      grid-template-rows: 1fr 1fr;
-      grid-template-columns: 3fr 5fr 5fr;
-      grid-template-areas: "social menu email" "social menu copyright";
-      column-gap: 2rem; } }
-  footer form {
-    grid-area: email;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    max-width: 35rem;
-    padding-bottom: 1rem; }
-    footer form input {
-      width: 60vw;
-      height: 2.8rem;
-      border-radius: 2.5rem;
-      border: none;
-      padding-left: 1.5rem;
-      font-size: 0.9rem;
-      color: #9095a7;
-      margin-right: 0.5rem;
-      outline: none; }
-      @media screen and (min-width: 920px) {
-        footer form input {
-          width: 20vw; } }
-    footer form small {
-      color: #e74c3c;
-      position: absolute;
-      visibility: hidden; }
-  footer .footer-menu {
-    grid-area: menu;
-    display: flex;
-    justify-content: space-around; }
-    @media screen and (max-width: 919px) {
-      footer .footer-menu {
-        width: 100%;
-        max-width: 35rem;
-        margin: 0 auto; } }
-    footer .footer-menu li {
-      list-style: none;
-      padding-bottom: 1rem;
-      cursor: pointer; }
-      footer .footer-menu li:hover {
-        color: #f25f3a; }
-  footer .social {
-    grid-area: social;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
-    footer .social .icons {
+  padding: 4.8rem 0; }
+  footer .wrapper {
+    display: grid;
+    grid-template-rows: 1fr 3fr 2fr 1fr;
+    grid-row-gap: 3.2rem;
+    grid-template-areas: "email" "menu" "social" "copyright";
+    position: relative;
+    z-index: 2; }
+    @media screen and (min-width: 992px) {
+      footer .wrapper {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 3fr 5fr 5fr;
+        grid-template-areas: "social menu email" "social menu copyright";
+        column-gap: 3.2rem; } }
+    footer .wrapper form {
+      grid-area: email;
       display: flex;
       justify-content: space-between;
-      width: 100%;
-      margin: 0 auto; }
+      margin: 0 auto;
+      max-width: 35rem;
+      padding-bottom: 1rem; }
+      footer .wrapper form input {
+        width: 60vw;
+        height: 2.8rem;
+        border-radius: 2.5rem;
+        border: none;
+        padding-left: 1.5rem;
+        font-size: 0.9rem;
+        color: #9095a7;
+        margin-right: 0.5rem;
+        outline: none; }
+        @media screen and (min-width: 920px) {
+          footer .wrapper form input {
+            width: 20vw; } }
+      footer .wrapper form small {
+        color: #e74c3c;
+        position: absolute;
+        visibility: hidden; }
+    footer .wrapper .footer-menu {
+      grid-area: menu;
+      display: flex;
+      justify-content: space-around; }
       @media screen and (max-width: 919px) {
-        footer .social .icons {
-          max-width: 35rem; } }
+        footer .wrapper .footer-menu {
+          width: 100%;
+          max-width: 35rem;
+          margin: 0 auto; } }
+      footer .wrapper .footer-menu li {
+        list-style: none;
+        padding-bottom: 1rem;
+        cursor: pointer; }
+        footer .wrapper .footer-menu li:hover {
+          color: #f25f3a; }
+    footer .wrapper .social {
+      grid-area: social;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      footer .wrapper .social .icons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto; }
+        @media screen and (max-width: 919px) {
+          footer .wrapper .social .icons {
+            max-width: 35rem; } }
+        @media screen and (min-width: 920px) {
+          footer .wrapper .social .icons {
+            order: 2;
+            max-width: 13rem; } }
+        footer .wrapper .social .icons img {
+          cursor: pointer;
+          width: 2.2rem;
+          height: 2.2rem; }
+          @media screen and (min-width: 920px) {
+            footer .wrapper .social .icons img {
+              height: 1.5rem;
+              width: 1.5rem; } }
+        footer .wrapper .social .icons .size {
+          width: 2.3rem; }
+          @media screen and (min-width: 920px) {
+            footer .wrapper .social .icons .size {
+              width: 1.5rem; } }
+      footer .wrapper .social .logo {
+        width: 12rem;
+        height: 2rem;
+        align-self: center; }
+        @media screen and (min-width: 920px) and (max-width: 1081px) {
+          footer .wrapper .social .logo {
+            height: 1.7rem;
+            width: 10rem; } }
+    footer .wrapper .copyright {
+      grid-area: copyright;
+      align-self: flex-end;
+      justify-self: center;
+      font-size: 0.9rem; }
       @media screen and (min-width: 920px) {
-        footer .social .icons {
-          order: 2;
-          max-width: 13rem; } }
-      footer .social .icons img {
-        cursor: pointer;
-        width: 2.2rem;
-        height: 2.2rem; }
-        @media screen and (min-width: 920px) {
-          footer .social .icons img {
-            height: 1.5rem;
-            width: 1.5rem; } }
-      footer .social .icons .size {
-        width: 2.3rem; }
-        @media screen and (min-width: 920px) {
-          footer .social .icons .size {
-            width: 1.5rem; } }
-    footer .social .logo {
-      width: 12rem;
-      height: 2rem;
-      align-self: center; }
-      @media screen and (min-width: 920px) and (max-width: 1081px) {
-        footer .social .logo {
-          height: 1.7rem;
-          width: 10rem; } }
-  footer .copyright {
-    grid-area: copyright;
-    align-self: flex-end;
-    justify-self: center;
-    font-size: 0.9rem; }
-    @media screen and (min-width: 920px) {
-      footer .copyright {
-        justify-self: flex-end; } }
+        footer .wrapper .copyright {
+          justify-self: flex-end; } }
