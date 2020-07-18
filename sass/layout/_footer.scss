@@ -1,17 +1,19 @@
 footer {
   background: $color-darker-blue;
   color: $color-light-gray;
-  padding: 4.7rem 0;
+  // padding: 4.7rem 0;
   padding: 5.2rem 0;
+
+  @media screen and (min-width: 992px) {
+    padding-top: 6.2rem;
+  }
 
   .wrapper {
     display: grid;
     grid-template-rows: 1fr 2fr 2fr 1fr;
     grid-row-gap: 3.2rem;
     grid-template-areas: "email" "menu" "social" "copyright";
-
     position: relative;
-    // z-index: 2; ??????
 
     @media screen and (min-width: 992px) {
       grid-template-rows: 1fr 1fr;
@@ -19,7 +21,7 @@ footer {
       grid-template-areas:
         "social menu email"
         "social menu copyright";
-      column-gap: 3.2rem;
+      column-gap: 5.9rem;
     }
 
     form {
@@ -30,6 +32,12 @@ footer {
       max-width: 56rem;
       // padding-bottom: 1.6rem;
       padding-bottom: 2.2rem;
+
+      @media screen and (min-width: 992px) {
+        justify-content: flex-end;
+        margin: 0;
+        padding: 0.3rem 0 2.7rem;
+      }
 
       input {
         width: 64vw;
@@ -42,16 +50,14 @@ footer {
         margin-right: 0.8rem;
         outline: none;
 
-        // @media screen and (min-width: 920px) {
-        //   width: 20vw;
-        // }
+        @media screen and (min-width: 992px) {
+          width: 20rem;
+        }
       }
 
       small {
         color: $color-error;
         position: absolute;
-        // bottom: 0;
-        // left: 0;
         visibility: hidden;
       }
     }
@@ -61,11 +67,20 @@ footer {
       display: flex;
       justify-content: space-around;
 
+      width: 100%;
+      max-width: 56rem;
+      margin: 0 auto;
+
       // @media screen and (max-width: 919px) {
       //   width: 100%;
       //   max-width: 35rem;
       //   margin: 0 auto;
       // }
+
+      @media screen and (min-width: 992px) {
+        justify-content: space-between;
+        // padding-top: 1rem;
+      }
 
       li {
         list-style: none;
@@ -90,53 +105,65 @@ footer {
       flex-direction: column;
       justify-content: space-between;
 
-      .icons {
+      @media screen and (min-width: 992px) {
+        // padding: 1rem 0 2.6rem 1rem;
+        // padding: 0 0 3.6rem 1rem;
+        padding: 0 0 5.2rem 1rem;
+      }
+
+      ul {
         display: flex;
         justify-content: space-between;
-        // align-self: flex-start;
         width: 100%;
         margin: 0 auto;
         max-width: 56rem;
         padding: 0 4vw;
 
-        // @media screen and (max-width: 919px) {
-        //   max-width: 35rem;
-        // }
+        @media screen and (min-width: 768px) {
+          padding: 0;
+        }
 
         @media screen and (min-width: 992px) {
           order: 2;
-          max-width: 20.8rem;
+          // max-width: 20.8rem;
+          max-width: 15rem;
+          margin: 0;
         }
 
         img {
-          cursor: pointer;
-          width: 3.5rem;
-          height: 3.5rem;
+          width: 3.2rem;
+          height: 3.2rem;
           @media screen and (min-width: 992px) {
-            height: 2.4rem;
-            width: 2.4rem;
+            // height: 2.4rem;
+            // width: 2.4rem;
+            height: unset;
+            width: unset;
           }
         }
 
         .size {
           width: 3.7rem;
 
-          // @media screen and (min-width: 920px) {
-          //   width: 1.5rem;
-          // }
+          @media screen and (min-width: 992px) {
+            // width: 1.5rem;
+            width: unset;
+          }
+        }
+        li {
+          list-style: none;
         }
       }
 
       .logo {
-        width: 16.2rem;
-        height: 2.6rem;
         align-self: center;
         margin-bottom: 2.5rem;
+        cursor: pointer;
 
-        // @media screen and (min-width: 920px) and (max-width: 1081px) {
-        //   height: 1.7rem;
-        //   width: 10rem;
-        // }
+        @media screen and (min-width: 992px) {
+          align-self: unset;
+          width: fit-content;
+          margin-bottom: 0;
+        }
       }
     }
 
@@ -146,17 +173,17 @@ footer {
       justify-self: center;
       font-size: 1.3rem;
 
-      // @media screen and (min-width: 920px) {
-      //   justify-self: flex-end;
-      // }
+      @media screen and (min-width: 992px) {
+        justify-self: flex-end;
+      }
     }
 
     .attribution {
       font-size: 11px;
       text-align: center;
-      //     @media screen and (min-width: 920px) {
-      //       grid-column: 1/-1;
-      //     }
+      @media screen and (min-width: 992px) {
+        grid-column: 1/-1;
+      }
     }
     .attribution a {
       color: #909fda;

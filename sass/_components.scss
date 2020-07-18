@@ -58,10 +58,13 @@
   &--action {
     background-color: $color-light-red;
     color: $color-bright-red;
+
     &:hover {
-      color: lighten($color-bright-red, 12%);
+      background-color: lighten($color-bright-red, 12%);
+      color: $color-light-gray;
     }
-    @media screen and (min-width: 920px) {
+
+    @media screen and (min-width: 992px) {
       align-self: center;
     }
   }
@@ -83,7 +86,7 @@
   margin: 0 auto;
   height: inherit;
 
-  // @media screen and (min-width: 1180px) {
-  //   padding: 0;
-  // }
+  @media screen and (min-width: 1180px) {
+    padding: 0;
+  }
 }

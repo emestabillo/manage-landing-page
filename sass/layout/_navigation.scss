@@ -47,7 +47,7 @@ nav {
       transform: none;
       font-weight: 400;
       position: static;
-      padding: 0;
+      padding: 0 0 0 1rem;
       background: transparent;
     }
 
@@ -69,6 +69,7 @@ nav {
 
         @media screen and (min-width: 992px) {
           font-size: 1.3rem;
+          padding-bottom: 0;
         }
       }
       &:last-child a {

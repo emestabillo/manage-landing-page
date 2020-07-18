@@ -93,8 +93,9 @@ img {
     background-color: #fff0ec;
     color: #f25f3a; }
     .cta--action:hover {
-      color: #f68e74; }
-    @media screen and (min-width: 920px) {
+      background-color: #f68e74;
+      color: #fafafa; }
+    @media screen and (min-width: 992px) {
       .cta--action {
         align-self: center; } }
   .cta--email {
@@ -110,6 +111,9 @@ img {
   padding: 0 2.4rem;
   margin: 0 auto;
   height: inherit; }
+  @media screen and (min-width: 1180px) {
+    .container {
+      padding: 0; } }
 
 nav {
   display: flex;
@@ -152,7 +156,7 @@ nav {
         transform: none;
         font-weight: 400;
         position: static;
-        padding: 0;
+        padding: 0 0 0 1rem;
         background: transparent; } }
     @media screen and (min-width: 992px) {
       nav ul li {
@@ -167,7 +171,8 @@ nav {
         color: #9095a7; }
       @media screen and (min-width: 992px) {
         nav ul li a {
-          font-size: 1.3rem; } }
+          font-size: 1.3rem;
+          padding-bottom: 0; } }
     @media screen and (max-width: 991px) {
       nav ul li:last-child a {
         padding-bottom: 0; } }
@@ -427,12 +432,10 @@ header {
   background: #f25f3a;
   position: relative;
   text-align: center;
-  line-height: 1.3;
   overflow: hidden; }
   @media screen and (min-width: 992px) {
     .action {
-      display: flex;
-      justify-content: space-between; } }
+      padding: 6.4rem 0; } }
   .action::before {
     content: " ";
     display: block;
@@ -448,22 +451,30 @@ header {
     /* background-position: 100% 40%; */
     background-size: cover;
     background-position: 100% 0%; }
+  @media screen and (min-width: 1180px) {
+    .action__text {
+      display: flex;
+      justify-content: space-between; } }
   .action h1 {
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.9rem;
     color: #fafafa;
-    padding-bottom: 2.4rem; }
-    @media screen and (min-width: 920px) {
+    padding-bottom: 3rem;
+    line-height: 1.3; }
+    @media screen and (min-width: 1180px) {
       .action h1 {
         width: 50%;
         padding-bottom: 0;
-        text-align: left; } }
+        text-align: left;
+        line-height: 1.2; } }
 
 footer {
   background: #1d1e25;
   color: #fafafa;
-  padding: 4.7rem 0;
   padding: 5.2rem 0; }
+  @media screen and (min-width: 992px) {
+    footer {
+      padding-top: 6.2rem; } }
   footer .wrapper {
     display: grid;
     grid-template-rows: 1fr 2fr 2fr 1fr;
@@ -475,7 +486,7 @@ footer {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 3fr 5fr 5fr;
         grid-template-areas: "social menu email" "social menu copyright";
-        column-gap: 3.2rem; } }
+        column-gap: 5.9rem; } }
     footer .wrapper form {
       grid-area: email;
       display: flex;
@@ -483,6 +494,11 @@ footer {
       margin: 0 auto;
       max-width: 56rem;
       padding-bottom: 2.2rem; }
+      @media screen and (min-width: 992px) {
+        footer .wrapper form {
+          justify-content: flex-end;
+          margin: 0;
+          padding: 0.3rem 0 2.7rem; } }
       footer .wrapper form input {
         width: 64vw;
         height: 4.5rem;
@@ -493,6 +509,9 @@ footer {
         color: #9095a7;
         margin-right: 0.8rem;
         outline: none; }
+        @media screen and (min-width: 992px) {
+          footer .wrapper form input {
+            width: 20rem; } }
       footer .wrapper form small {
         color: #e74c3c;
         position: absolute;
@@ -500,7 +519,13 @@ footer {
     footer .wrapper .footer-menu {
       grid-area: menu;
       display: flex;
-      justify-content: space-around; }
+      justify-content: space-around;
+      width: 100%;
+      max-width: 56rem;
+      margin: 0 auto; }
+      @media screen and (min-width: 992px) {
+        footer .wrapper .footer-menu {
+          justify-content: space-between; } }
       footer .wrapper .footer-menu li {
         list-style: none; }
         footer .wrapper .footer-menu li a {
@@ -516,40 +541,61 @@ footer {
       display: flex;
       flex-direction: column;
       justify-content: space-between; }
-      footer .wrapper .social .icons {
+      @media screen and (min-width: 992px) {
+        footer .wrapper .social {
+          padding: 0 0 5.2rem 1rem; } }
+      footer .wrapper .social ul {
         display: flex;
         justify-content: space-between;
         width: 100%;
         margin: 0 auto;
         max-width: 56rem;
         padding: 0 4vw; }
+        @media screen and (min-width: 768px) {
+          footer .wrapper .social ul {
+            padding: 0; } }
         @media screen and (min-width: 992px) {
-          footer .wrapper .social .icons {
+          footer .wrapper .social ul {
             order: 2;
-            max-width: 20.8rem; } }
-        footer .wrapper .social .icons img {
-          cursor: pointer;
-          width: 3.5rem;
-          height: 3.5rem; }
+            max-width: 15rem;
+            margin: 0; } }
+        footer .wrapper .social ul img {
+          width: 3.2rem;
+          height: 3.2rem; }
           @media screen and (min-width: 992px) {
-            footer .wrapper .social .icons img {
-              height: 2.4rem;
-              width: 2.4rem; } }
-        footer .wrapper .social .icons .size {
+            footer .wrapper .social ul img {
+              height: unset;
+              width: unset; } }
+        footer .wrapper .social ul .size {
           width: 3.7rem; }
+          @media screen and (min-width: 992px) {
+            footer .wrapper .social ul .size {
+              width: unset; } }
+        footer .wrapper .social ul li {
+          list-style: none; }
       footer .wrapper .social .logo {
-        width: 16.2rem;
-        height: 2.6rem;
         align-self: center;
-        margin-bottom: 2.5rem; }
+        margin-bottom: 2.5rem;
+        cursor: pointer; }
+        @media screen and (min-width: 992px) {
+          footer .wrapper .social .logo {
+            align-self: unset;
+            width: fit-content;
+            margin-bottom: 0; } }
     footer .wrapper .copyright {
       grid-area: copyright;
       align-self: flex-start;
       justify-self: center;
       font-size: 1.3rem; }
+      @media screen and (min-width: 992px) {
+        footer .wrapper .copyright {
+          justify-self: flex-end; } }
     footer .wrapper .attribution {
       font-size: 11px;
       text-align: center; }
+      @media screen and (min-width: 992px) {
+        footer .wrapper .attribution {
+          grid-column: 1/-1; } }
     footer .wrapper .attribution a {
       color: #909fda;
       text-decoration: none; }
