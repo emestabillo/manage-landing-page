@@ -101,7 +101,7 @@ p {
         width: 13.9rem; } }
   .cta--email {
     width: 8rem;
-    height: 4.5rem; }
+    height: 4.4rem; }
     @media screen and (min-width: 600px) {
       .cta--email {
         width: 6.5rem; } }
@@ -500,7 +500,7 @@ footer {
       justify-content: space-between;
       margin: 0 auto;
       max-width: 56rem;
-      padding-bottom: 2.2rem; }
+      position: relative; }
       @media screen and (min-width: 992px) {
         footer .wrapper form {
           justify-content: flex-end;
@@ -508,14 +508,16 @@ footer {
           padding: 0.3rem 0 2.7rem; } }
       footer .wrapper form input {
         width: 64vw;
-        height: 4.5rem;
+        height: 4.4rem;
         border-radius: 2.5rem;
-        border: none;
+        border: 2px solid transparent;
         padding-left: 2.4rem;
         font-size: 1.4rem;
         color: #9095a7;
         margin-right: 0.7rem;
         outline: none; }
+        footer .wrapper form input:focus {
+          border-color: #9095a7; }
         @media screen and (min-width: 992px) {
           footer .wrapper form input {
             width: 20rem;
@@ -523,7 +525,20 @@ footer {
       footer .wrapper form small {
         color: #e74c3c;
         position: absolute;
-        visibility: hidden; }
+        visibility: hidden;
+        bottom: 0.5rem;
+        left: 2rem;
+        font-size: 1.2rem;
+        left: 2%; }
+        @media screen and (min-width: 992px) {
+          footer .wrapper form small {
+            left: 32%; } }
+    footer .wrapper .success input {
+      border-color: #2ecc71; }
+    footer .wrapper .error input {
+      border-color: #e74c3c; }
+    footer .wrapper .error small {
+      visibility: visible; }
     footer .wrapper .footer-menu {
       grid-area: menu;
       display: flex;
