@@ -1,8 +1,7 @@
 footer {
   background: $color-darker-blue;
   color: $color-light-gray;
-  // padding: 4.7rem 0;
-  padding: 5.2rem 0;
+  padding-top: 5.2rem;
 
   @media screen and (min-width: 992px) {
     padding-top: 6.2rem;
@@ -10,8 +9,8 @@ footer {
 
   .wrapper {
     display: grid;
-    grid-template-rows: 1fr 2fr 2fr 1fr;
-    grid-row-gap: 3.2rem;
+    grid-template-rows: 1fr 2fr 2fr 5.2rem;
+    grid-row-gap: 2.8rem;
     grid-template-areas: "email" "menu" "social" "copyright";
     position: relative;
 
@@ -21,7 +20,8 @@ footer {
       grid-template-areas:
         "social menu email"
         "social menu copyright";
-      column-gap: 5.9rem;
+      column-gap: 5.3rem;
+      grid-row-gap: 2.2rem;
     }
 
     form {
@@ -30,7 +30,6 @@ footer {
       justify-content: space-between;
       margin: 0 auto;
       max-width: 56rem;
-      // padding-bottom: 1.6rem;
       padding-bottom: 2.2rem;
 
       @media screen and (min-width: 992px) {
@@ -47,11 +46,12 @@ footer {
         padding-left: 2.4rem;
         font-size: 1.4rem;
         color: $color-gray-blue;
-        margin-right: 0.8rem;
+        margin-right: 0.7rem;
         outline: none;
 
         @media screen and (min-width: 992px) {
           width: 20rem;
+          padding-left: 1.8rem;
         }
       }
 
@@ -71,15 +71,8 @@ footer {
       max-width: 56rem;
       margin: 0 auto;
 
-      // @media screen and (max-width: 919px) {
-      //   width: 100%;
-      //   max-width: 35rem;
-      //   margin: 0 auto;
-      // }
-
       @media screen and (min-width: 992px) {
         justify-content: space-between;
-        // padding-top: 1rem;
       }
 
       li {
@@ -104,11 +97,10 @@ footer {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      padding-top: 1rem;
 
       @media screen and (min-width: 992px) {
-        // padding: 1rem 0 2.6rem 1rem;
-        // padding: 0 0 3.6rem 1rem;
-        padding: 0 0 5.2rem 1rem;
+        padding: 0 0 4.5rem 0.6rem;
       }
 
       ul {
@@ -125,7 +117,6 @@ footer {
 
         @media screen and (min-width: 992px) {
           order: 2;
-          // max-width: 20.8rem;
           max-width: 15rem;
           margin: 0;
         }
@@ -134,8 +125,6 @@ footer {
           width: 3.2rem;
           height: 3.2rem;
           @media screen and (min-width: 992px) {
-            // height: 2.4rem;
-            // width: 2.4rem;
             height: unset;
             width: unset;
           }
@@ -145,7 +134,6 @@ footer {
           width: 3.7rem;
 
           @media screen and (min-width: 992px) {
-            // width: 1.5rem;
             width: unset;
           }
         }
@@ -175,20 +163,17 @@ footer {
 
       @media screen and (min-width: 992px) {
         justify-self: flex-end;
+        font-size: 1.26rem;
+        padding-top: 1rem;
       }
     }
-
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-      @media screen and (min-width: 992px) {
-        grid-column: 1/-1;
-      }
-    }
-    .attribution a {
-      color: #909fda;
-      text-decoration: none;
-    }
-    // }
+  }
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: #909fda;
+    text-decoration: none;
   }
 }

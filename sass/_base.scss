@@ -26,9 +26,6 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-size: 62.5%;
-  // @media screen and (max-width: 839px) {
-  //   font-size: 87.5%;
-  // }
 }
 
 body {
@@ -77,12 +74,4 @@ h3 {
 
 p {
   color: $color-gray-blue;
-  // @media screen and (min-width: 992px) {
-  //   font-size: 1.7rem;
-  //   line-height: 1.6;
-  // }
-}
-
-img {
-  max-width: 100%;
 }

@@ -9,7 +9,7 @@ nav {
   }
 
   @media screen and (min-width: 992px) {
-    padding: 1.5rem 0 0 0;
+    padding: 1.6rem 0 0 0;
   }
 
   .brand {
@@ -20,7 +20,7 @@ nav {
 
       @media screen and (min-width: 768px) {
         transform: scale(1);
-        padding-left: 0.8rem;
+        padding-bottom: 0.3rem;
       }
     }
   }
@@ -47,7 +47,8 @@ nav {
       transform: none;
       font-weight: 400;
       position: static;
-      padding: 0 0 0 1rem;
+      // padding: 0.4rem 0 0 1.9rem;
+      padding: 0 0 0 1.9rem;
       background: transparent;
     }
 

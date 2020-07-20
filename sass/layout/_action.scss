@@ -3,11 +3,10 @@
   background: $color-bright-red;
   position: relative;
   text-align: center;
-  // line-height: 1.3;
   overflow: hidden;
 
   @media screen and (min-width: 992px) {
-    padding: 6.4rem 0;
+    padding: 6.4rem 0 7.2rem;
   }
 
   &::before {
@@ -25,12 +24,6 @@
     /* background-position: 100% 40%; */
     background-size: cover;
     background-position: 100% 0%;
-
-    // @media screen and (min-width: 920px) {
-    //   left: -1rem;
-    //   top: 0;
-    //   width: 60%;
-    // }
   }
 
   &__text {
@@ -51,7 +44,7 @@
       width: 50%;
       padding-bottom: 0;
       text-align: left;
-      line-height: 1.2;
+      line-height: 1.1;
     }
   }
 }

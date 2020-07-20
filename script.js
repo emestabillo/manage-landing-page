@@ -21,8 +21,8 @@ let swiper = new Swiper(".swiper-container", {
       spaceBetween: 30,
     },
     992: {
-      slidesPerView: 2.8,
-      spaceBetween: 35,
+      slidesPerView: 2.6,
+      // spaceBetween: 30,
     },
   },
   loop: true,

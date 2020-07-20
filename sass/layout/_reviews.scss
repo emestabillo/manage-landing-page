@@ -1,21 +1,18 @@
 .reviews {
   text-align: center;
-  // padding: 0 8vw 5rem;
   padding: 0 8vw 4.4rem;
-
   overflow: hidden;
+
   @media screen and (min-width: 992px) {
-    padding: 5rem 0 18rem;
+    padding: 6.5rem 0 18rem;
   }
-  // @media screen and (min-width: 1078px) {
-  //   padding: 0 0 5rem;
-  // }
 
   h2 {
     font-size: 3rem;
     padding-bottom: 4rem;
+
     @media screen and (min-width: 992px) {
-      font-size: 3.8rem;
+      font-size: 3.9rem;
       padding-bottom: 4.5rem;
     }
   }
@@ -30,10 +27,9 @@
     margin-bottom: 2rem;
   }
 
-  .swiper-container-horizontal
-    > .swiper-pagination-bullets
-    .swiper-pagination-bullet {
+  .swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 2px;
+
     @media screen and (min-width: 992px) {
       display: none;
     }
@@ -49,8 +45,6 @@
     text-align: center;
     font-size: 1.4rem;
     background: #fff;
-    // padding-bottom: 4.5rem;
-    // padding-bottom: 1.5rem;
     padding-bottom: 1.6rem;
     /* Center slide text vertically */
     display: flex;
@@ -68,11 +62,10 @@
     }
 
     img {
-      width: 7rem;
-      height: 7rem;
+      width: 7.2rem;
+      height: 7.2rem;
       position: relative;
-      margin-top: 2.8rem;
-      margin-bottom: -3.2rem;
+      margin: 2.8rem auto -3.2rem;
     }
     .testimonial {
       background: $color-light-gray;
@@ -85,13 +78,10 @@
 
       @media screen and (min-width: 992px) {
         font-size: 1.6rem;
-        padding-top: 5.4rem;
+        // padding-top: 5.4rem;
         // height: 14.3rem;
+        padding: 5.4rem 0 4rem;
       }
-
-      // @media screen and (min-width: 1236px) and (max-width: 1430px) {
-      //   height: 14.5rem;
-      // }
 
       h4 {
         padding-bottom: 2rem;
@@ -99,10 +89,14 @@
 
       p {
         line-height: 1.9;
-        padding: 0 0.8rem;
+        padding: 0 1rem;
         @media screen and (min-width: 992px) {
           // font-size: 1.6rem;
-          line-height: 1.6;
+          // line-height: 1.6;
+
+          // padding: 0 3.8rem;
+          padding: 0 2.7rem;
+          line-height: 1.7;
         }
       }
     }
