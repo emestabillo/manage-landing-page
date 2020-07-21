@@ -2,7 +2,6 @@ footer {
   background: $color-darker-blue;
   color: $color-light-gray;
   padding-top: 5.2rem;
-
   @media screen and (min-width: 992px) {
     padding-top: 6.2rem;
   }
@@ -13,7 +12,6 @@ footer {
     grid-row-gap: 2.8rem;
     grid-template-areas: "email" "menu" "social" "copyright";
     position: relative;
-
     @media screen and (min-width: 992px) {
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 3fr 5fr 5fr;
@@ -30,9 +28,7 @@ footer {
       justify-content: space-between;
       margin: 0 auto;
       max-width: 56rem;
-      // padding-bottom: 2.2rem;
       position: relative;
-
       @media screen and (min-width: 992px) {
         justify-content: flex-end;
         margin: 0;
@@ -53,10 +49,9 @@ footer {
         &:focus {
           border-color: $color-gray-blue;
         }
-
         @media screen and (min-width: 992px) {
           width: 20rem;
-          padding-left: 1.8rem;
+          padding-left: 1.5rem;
         }
       }
 
@@ -95,7 +90,6 @@ footer {
       width: 100%;
       max-width: 56rem;
       margin: 0 auto;
-
       @media screen and (min-width: 992px) {
         justify-content: space-between;
       }
@@ -123,7 +117,6 @@ footer {
       flex-direction: column;
       justify-content: space-between;
       padding-top: 1rem;
-
       @media screen and (min-width: 992px) {
         padding: 0 0 4.5rem 0.6rem;
       }
@@ -135,11 +128,9 @@ footer {
         margin: 0 auto;
         max-width: 56rem;
         padding: 0 4vw;
-
         @media screen and (min-width: 768px) {
           padding: 0;
         }
-
         @media screen and (min-width: 992px) {
           order: 2;
           max-width: 15rem;
@@ -171,7 +162,6 @@ footer {
         align-self: center;
         margin-bottom: 2.5rem;
         cursor: pointer;
-
         @media screen and (min-width: 992px) {
           align-self: unset;
           width: fit-content;
@@ -185,7 +175,6 @@ footer {
       align-self: flex-start;
       justify-self: center;
       font-size: 1.3rem;
-
       @media screen and (min-width: 992px) {
         justify-self: flex-end;
         font-size: 1.26rem;
@@ -193,10 +182,12 @@ footer {
       }
     }
   }
+
   .attribution {
     font-size: 11px;
     text-align: center;
   }
+
   .attribution a {
     color: #909fda;
     text-decoration: none;

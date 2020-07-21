@@ -19,24 +19,24 @@ body {
   body::before {
     content: "";
     position: absolute;
-    background: url(/images/bg-tablet-pattern.svg) no-repeat, url(/images/bg-tablet-pattern.svg) no-repeat;
-    background-position: top -7rem right -7rem, top 48% right -15rem;
-    background-size: 100%, 80%;
+    background: url(/images/bg-tablet-pattern.svg) no-repeat;
+    background-position: top -10rem right -12rem;
+    background-size: 44.5rem 44rem;
     width: 100%;
     height: 100%;
     z-index: -1; }
     @media screen and (min-width: 600px) {
       body::before {
-        background-position: top -10% right -7rem, top 60% right -21rem;
-        background-size: 90%, 70%; } }
+        background-position: top -7% right -7rem;
+        background-size: 95%; } }
     @media screen and (min-width: 768px) {
       body::before {
-        background-position: top -20% right -10rem, top 60% right -25rem;
-        background-size: 75%, 60%; } }
+        background-position: top -9% right -10rem;
+        background-size: 82%; } }
     @media screen and (min-width: 992px) {
       body::before {
-        background-size: 814px 814px, 60%;
-        background-position: top -18rem right -19rem, top 201% left -25rem; } }
+        background-size: 80rem 83rem;
+        background-position: top -16rem right -14rem; } }
   @media screen and (min-width: 1441px) {
     body {
       box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); } }
@@ -294,7 +294,30 @@ header {
           line-height: 1.6; } }
 
 .features {
-  padding: 3rem 0 1rem; }
+  padding: 3rem 0 1rem;
+  position: relative; }
+  .features::before {
+    content: "";
+    position: absolute;
+    background: url(/images/bg-tablet-pattern.svg) no-repeat;
+    background-position: top right -20.4rem;
+    background-size: 90%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    margin-top: -33.8rem; }
+    @media screen and (min-width: 560px) {
+      .features::before {
+        background-size: 70%;
+        margin-top: -40.8rem; } }
+    @media screen and (min-width: 768px) {
+      .features::before {
+        background-size: 55%; } }
+    @media screen and (min-width: 992px) {
+      .features::before {
+        background-size: 60%;
+        background-position: bottom -36rem left -56rem;
+        margin-top: 14rem; } }
   @media screen and (min-width: 992px) {
     .features {
       padding: 3.5rem 0; } }
@@ -446,17 +469,22 @@ header {
     content: " ";
     display: block;
     position: absolute;
-    left: -21rem;
-    top: 4rem;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    left: -28rem;
+    top: 6rem;
+    width: 38rem;
+    height: 49rem;
+    z-index: 100;
     opacity: 0.1;
     background-image: url(/images/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
-    /* background-position: 100% 40%; */
-    background-size: cover;
-    background-position: 100% 0%; }
+    background-position: 100% 0%;
+    background-size: cover; }
+    @media screen and (min-width: 992px) {
+      .action::before {
+        left: 16.8rem;
+        top: -4.6rem;
+        width: 57.4rem;
+        height: 49rem; } }
   @media screen and (min-width: 1180px) {
     .action__text {
       display: flex;
@@ -521,7 +549,7 @@ footer {
         @media screen and (min-width: 992px) {
           footer .wrapper form input {
             width: 20rem;
-            padding-left: 1.8rem; } }
+            padding-left: 1.5rem; } }
       footer .wrapper form small {
         color: #e74c3c;
         position: absolute;
