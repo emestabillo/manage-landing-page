@@ -4,34 +4,34 @@
   border: 1px solid $color-bright-red;
   background: $color-bright-red;
   color: $color-light-gray;
+}
 
-  &--nav,
-  &--header,
-  &--reviews,
-  &--action,
-  &--email {
-    font-weight: 700;
-    cursor: pointer;
+.cta {
+  font-weight: 700;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten($color-bright-red, 12%);
+    border: 1px solid lighten($color-bright-red, 12%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(0.98);
   }
 
   &--nav,
   &--header,
   &--reviews,
   &--action {
-    width: 8.4rem;
-    height: 2.9rem;
-    font-size: 0.8rem;
-    box-shadow: 0px 12px 13px -10px rgba(242, 95, 58, 1);
-  }
-
-  &--nav,
-  &--header,
-  &--reviews,
-  &--email {
-    &:hover {
-      background: lighten($color-bright-red, 12%);
-      border: 1px solid lighten($color-bright-red, 12%);
-    }
+    height: 4.4rem;
+    width: 13.7rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    box-shadow: 0px 12px 13px -10px #f25f3a;
   }
 
   &--nav {
@@ -42,28 +42,59 @@
   }
 
   &--header {
+    margin-top: 1.4rem;
     @media screen and (min-width: 992px) {
-      align-self: flex-end;
+      align-self: center;
+    }
+  }
+
+  &--reviews {
+    margin-top: 3.6rem;
+    @media screen and (min-width: 992px) {
+      margin-top: 2.5rem;
     }
   }
 
   &--action {
     background-color: $color-light-red;
     color: $color-bright-red;
+
     &:hover {
-      color: lighten($color-bright-red, 12%);
+      background-color: lighten($color-bright-red, 12%);
+      color: $color-light-gray;
     }
-    @media screen and (min-width: 920px) {
+
+    @media screen and (min-width: 992px) {
       align-self: center;
+      margin-top: 0.8rem;
+      margin-right: -0.5rem;
+      height: 4.6rem;
+      width: 13.9rem;
     }
   }
 
   &--email {
-    width: 5.5rem;
-    height: 2.8rem;
+    width: 8rem;
+    height: 4.4rem;
 
     @media screen and (min-width: 600px) {
       width: 6.5rem;
     }
   }
+}
+
+.container {
+  width: 100%;
+  max-width: 111rem;
+  padding: 0 2.4rem;
+  margin: 0 auto;
+  height: inherit;
+
+  @media screen and (min-width: 1180px) {
+    padding: 0;
+  }
+}
+
+img {
+  display: block;
 }
