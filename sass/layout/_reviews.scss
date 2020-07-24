@@ -3,7 +3,7 @@
   padding: 0 8vw 4.4rem;
   overflow: hidden;
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 768px) {
     padding: 6.5rem 0 18rem;
   }
 
@@ -27,24 +27,27 @@
     margin-bottom: 2rem;
   }
 
-  .swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 2px;
-
-    @media screen and (min-width: 992px) {
-      display: none;
+  .swiper-pagination-bullets {
+    .swiper-pagination-bullet {
+      margin: 0 2px;
+      border: 1px solid $color-bright-red;
+      background: none;
+      opacity: 1;
+      @media screen and (min-width: 992px) {
+        display: none;
+      }
+      &:focus {
+        outline: none;
+      }
     }
-  }
-
-  .swiper-pagination-bullet {
-    &:focus {
-      outline: none;
+    .swiper-pagination-bullet-active {
+      background: $color-bright-red;
     }
   }
 
   .swiper-slide {
     text-align: center;
     font-size: 1.4rem;
-    background: #fff;
     padding-bottom: 1.6rem;
     /* Center slide text vertically */
     display: flex;
@@ -65,8 +68,10 @@
       width: 7.2rem;
       height: 7.2rem;
       position: relative;
-      margin: 2.8rem auto -3.2rem;
+      // margin: 2.8rem auto -3.2rem;
+      margin: 2.6rem auto -3rem;
     }
+
     .testimonial {
       background: $color-light-gray;
       padding: 5rem 0;
@@ -96,7 +101,7 @@
 
           // padding: 0 3.8rem;
           padding: 0 2.7rem;
-          line-height: 1.7;
+          line-height: 1.6;
         }
       }
     }

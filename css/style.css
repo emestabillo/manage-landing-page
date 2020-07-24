@@ -4,7 +4,8 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  transition: all 0.3s; }
 
 html {
   box-sizing: border-box;
@@ -35,13 +36,14 @@ body {
         background-size: 82%; } }
     @media screen and (min-width: 992px) {
       body::before {
-        background-size: 80rem 83rem;
-        background-position: top -16rem right -14rem; } }
+        background-size: 82rem 81rem;
+        background-position: top -15rem right -15rem; } }
   @media screen and (min-width: 1441px) {
     body {
       box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2); } }
 
 h1,
+h2,
 h3 {
   color: #242d52; }
 
@@ -57,7 +59,12 @@ p {
 
 .cta {
   font-weight: 700;
-  cursor: pointer; }
+  cursor: pointer;
+  height: 4.4rem;
+  width: 13.7rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  box-shadow: 0px 12px 13px -10px #f25f3a; }
   .cta:hover {
     background: #f68e74;
     border: 1px solid #f68e74; }
@@ -65,12 +72,6 @@ p {
     outline: none; }
   .cta:active {
     transform: scale(0.98); }
-  .cta--nav, .cta--header, .cta--reviews, .cta--action {
-    height: 4.4rem;
-    width: 13.7rem;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    box-shadow: 0px 12px 13px -10px #f25f3a; }
   .cta--nav {
     display: none; }
     @media screen and (min-width: 992px) {
@@ -95,16 +96,18 @@ p {
     @media screen and (min-width: 992px) {
       .cta--action {
         align-self: center;
-        margin-top: 0.8rem;
+        margin-top: 0.6rem;
         margin-right: -0.5rem;
         height: 4.6rem;
         width: 13.9rem; } }
   .cta--email {
-    width: 8rem;
-    height: 4.4rem; }
+    height: 4.4rem;
+    padding: 0 2.3rem;
+    width: unset;
+    box-shadow: none; }
     @media screen and (min-width: 600px) {
       .cta--email {
-        width: 6.5rem; } }
+        width: 6.4rem; } }
 
 .container {
   width: 100%;
@@ -160,7 +163,7 @@ nav {
         transform: none;
         font-weight: 400;
         position: static;
-        padding: 0 0 0 1.9rem;
+        padding: 0 0 1rem 2.1rem;
         background: transparent; } }
     @media screen and (min-width: 992px) {
       nav ul li {
@@ -169,7 +172,7 @@ nav {
       text-decoration: none;
       color: #1d1e25;
       font-size: 1.8rem;
-      padding-bottom: 2rem;
+      padding: 1rem 0;
       display: block; }
       nav ul li a:hover {
         color: #9095a7; }
@@ -177,6 +180,9 @@ nav {
         nav ul li a {
           font-size: 1.3rem;
           padding-bottom: 0; } }
+    @media screen and (max-width: 991px) {
+      nav ul li:first-child a {
+        padding-top: 0; } }
     @media screen and (max-width: 991px) {
       nav ul li:last-child a {
         padding-bottom: 0; } }
@@ -195,7 +201,7 @@ nav {
     height: 0.4rem;
     width: 2.5rem;
     display: block;
-    background: #1d1e25;
+    background: #242d52;
     transition: all 0.3s ease-in-out; }
   .hamburger__icon {
     position: relative;
@@ -281,7 +287,7 @@ header {
       @media screen and (min-width: 992px) {
         .hero__text .title {
           font-size: 5.4rem;
-          line-height: 1.2; } }
+          line-height: 1.22; } }
     .hero__text .subtitle {
       font-size: 1.6rem;
       padding: 0.8rem 1.4rem 1.5rem;
@@ -315,9 +321,9 @@ header {
         background-size: 55%; } }
     @media screen and (min-width: 992px) {
       .features::before {
-        background-size: 60%;
-        background-position: bottom -36rem left -56rem;
-        margin-top: 14rem; } }
+        background-size: 81rem 81rem;
+        background-position: bottom -25rem left -50rem;
+        margin-top: 20rem; } }
   @media screen and (min-width: 992px) {
     .features {
       padding: 3.5rem 0; } }
@@ -358,17 +364,19 @@ header {
     padding-bottom: 5.2rem; }
     @media screen and (min-width: 992px) {
       .features__item {
-        padding-bottom: 3.8rem;
-        padding-right: 1rem; } }
+        padding-bottom: 3.7rem; }
+        .features__item:first-child {
+          padding-right: 1rem; } }
     .features__item .heading {
       display: flex;
-      background: #fff0ec; }
+      background: #fff0ec;
+      border-radius: 2.5rem 0 0 2.5rem; }
       @media screen and (min-width: 992px) {
         .features__item .heading {
           background: none; } }
       .features__item .heading .feature-number {
         width: 6.7rem;
-        height: 3.8rem;
+        height: 3.9rem;
         text-align: center;
         line-height: 2;
         font-size: 1.6rem;
@@ -385,13 +393,13 @@ header {
       @media screen and (min-width: 992px) {
         .features__item .details {
           padding-right: 0;
-          padding-left: 9.2rem; } }
+          padding-left: 9.4rem; } }
 
 .reviews {
   text-align: center;
   padding: 0 8vw 4.4rem;
   overflow: hidden; }
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 768px) {
     .reviews {
       padding: 6.5rem 0 18rem; } }
   .reviews h2 {
@@ -408,16 +416,20 @@ header {
   .reviews .swiper-wrapper {
     margin-bottom: 2rem; }
   .reviews .swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 2px; }
+    margin: 0 2px;
+    border: 1px solid #f25f3a;
+    background: none;
+    opacity: 1; }
     @media screen and (min-width: 992px) {
       .reviews .swiper-pagination-bullets .swiper-pagination-bullet {
         display: none; } }
-  .reviews .swiper-pagination-bullet:focus {
-    outline: none; }
+    .reviews .swiper-pagination-bullets .swiper-pagination-bullet:focus {
+      outline: none; }
+  .reviews .swiper-pagination-bullets .swiper-pagination-bullet-active {
+    background: #f25f3a; }
   .reviews .swiper-slide {
     text-align: center;
     font-size: 1.4rem;
-    background: #fff;
     padding-bottom: 1.6rem;
     /* Center slide text vertically */
     display: flex;
@@ -434,7 +446,7 @@ header {
       width: 7.2rem;
       height: 7.2rem;
       position: relative;
-      margin: 2.8rem auto -3.2rem; }
+      margin: 2.6rem auto -3rem; }
     .reviews .swiper-slide .testimonial {
       background: #fafafa;
       padding: 5rem 0;
@@ -454,7 +466,7 @@ header {
         @media screen and (min-width: 992px) {
           .reviews .swiper-slide .testimonial p {
             padding: 0 2.7rem;
-            line-height: 1.7; } }
+            line-height: 1.6; } }
 
 .action {
   padding: 9rem 0;
@@ -464,8 +476,8 @@ header {
   overflow: hidden; }
   @media screen and (min-width: 992px) {
     .action {
-      padding: 6.4rem 0 7.2rem; } }
-  .action::before {
+      padding: 6.4rem 0 7rem; } }
+  .action::before, .action::after {
     content: " ";
     display: block;
     position: absolute;
@@ -473,22 +485,33 @@ header {
     top: 6rem;
     width: 38rem;
     height: 49rem;
-    z-index: 100;
+    z-index: 1;
     opacity: 0.1;
     background-image: url(/images/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
     background-position: 100% 0%;
     background-size: cover; }
     @media screen and (min-width: 992px) {
-      .action::before {
+      .action::before, .action::after {
         left: 16.8rem;
         top: -4.6rem;
         width: 57.4rem;
         height: 49rem; } }
-  @media screen and (min-width: 1180px) {
-    .action__text {
-      display: flex;
-      justify-content: space-between; } }
+  .action::after {
+    left: unset;
+    right: -15rem;
+    opacity: 0;
+    background-position: top -38.5rem right -19.4rem; }
+    @media screen and (min-width: 1180px) {
+      .action::after {
+        opacity: 0.1; } }
+  .action__text {
+    position: relative;
+    z-index: 2; }
+    @media screen and (min-width: 1180px) {
+      .action__text {
+        display: flex;
+        justify-content: space-between; } }
   .action h1 {
     text-align: center;
     font-size: 3.9rem;
@@ -500,7 +523,8 @@ header {
         width: 50%;
         padding-bottom: 0;
         text-align: left;
-        line-height: 1.1; } }
+        line-height: 1.13;
+        font-size: 3.86rem; } }
 
 footer {
   background: #1d1e25;
@@ -540,10 +564,11 @@ footer {
         border-radius: 2.5rem;
         border: 2px solid transparent;
         padding-left: 2.4rem;
-        font-size: 1.4rem;
         color: #9095a7;
-        margin-right: 0.7rem;
+        margin-right: 0.8rem;
         outline: none; }
+        footer .wrapper form input::placeholder {
+          color: #b2b5c2; }
         footer .wrapper form input:focus {
           border-color: #9095a7; }
         @media screen and (min-width: 992px) {
@@ -576,7 +601,9 @@ footer {
       margin: 0 auto; }
       @media screen and (min-width: 992px) {
         footer .wrapper .footer-menu {
-          justify-content: space-between; } }
+          display: grid;
+          grid-column-gap: 18.5rem;
+          grid-template-columns: repeat(2, 1fr); } }
       footer .wrapper .footer-menu li {
         list-style: none; }
         footer .wrapper .footer-menu li a {
@@ -595,7 +622,7 @@ footer {
       padding-top: 1rem; }
       @media screen and (min-width: 992px) {
         footer .wrapper .social {
-          padding: 0 0 4.5rem 0.6rem; } }
+          padding: 0 0 4.3rem 0.6rem; } }
       footer .wrapper .social ul {
         display: flex;
         justify-content: space-between;
@@ -614,6 +641,8 @@ footer {
         footer .wrapper .social ul img {
           width: 3.2rem;
           height: 3.2rem; }
+          footer .wrapper .social ul img:hover {
+            transform: scale(1.2); }
           @media screen and (min-width: 992px) {
             footer .wrapper .social ul img {
               height: unset;
@@ -645,8 +674,11 @@ footer {
           font-size: 1.26rem;
           padding-top: 1rem; } }
   footer .attribution {
-    font-size: 11px;
-    text-align: center; }
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 0.2rem; }
   footer .attribution a {
     color: #909fda;
     text-decoration: none; }
+    footer .attribution a:hover {
+      color: #f25f3a; }

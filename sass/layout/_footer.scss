@@ -41,10 +41,13 @@ footer {
         border-radius: 2.5rem;
         border: 2px solid transparent;
         padding-left: 2.4rem;
-        font-size: 1.4rem;
         color: $color-gray-blue;
-        margin-right: 0.7rem;
+        margin-right: 0.8rem;
         outline: none;
+
+        &::placeholder {
+          color: lighten($color-gray-blue, 12%);
+        }
 
         &:focus {
           border-color: $color-gray-blue;
@@ -87,11 +90,18 @@ footer {
       display: flex;
       justify-content: space-around;
 
+      // display: grid;
+      // grid-column-gap: 18.5rem;
+      // grid-template-columns: repeat(2, 1fr);
+
       width: 100%;
       max-width: 56rem;
       margin: 0 auto;
       @media screen and (min-width: 992px) {
-        justify-content: space-between;
+        // justify-content: space-between;
+        display: grid;
+        grid-column-gap: 18.5rem;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       li {
@@ -118,7 +128,7 @@ footer {
       justify-content: space-between;
       padding-top: 1rem;
       @media screen and (min-width: 992px) {
-        padding: 0 0 4.5rem 0.6rem;
+        padding: 0 0 4.3rem 0.6rem;
       }
 
       ul {
@@ -140,6 +150,9 @@ footer {
         img {
           width: 3.2rem;
           height: 3.2rem;
+          &:hover {
+            transform: scale(1.2);
+          }
           @media screen and (min-width: 992px) {
             height: unset;
             width: unset;
@@ -184,12 +197,16 @@ footer {
   }
 
   .attribution {
-    font-size: 11px;
+    font-size: 1.1rem;
     text-align: center;
+    margin-top: 0.2rem;
   }
 
   .attribution a {
     color: #909fda;
     text-decoration: none;
+    &:hover {
+      color: $color-bright-red;
+    }
   }
 }

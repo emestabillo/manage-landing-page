@@ -23,9 +23,9 @@
     }
 
     @media screen and (min-width: 992px) {
-      background-size: 60%;
-      background-position: bottom -36rem left -56rem;
-      margin-top: 14rem;
+      background-size: 81rem 81rem;
+      background-position: bottom -25rem left -50rem;
+      margin-top: 20rem;
     }
   }
 
@@ -82,20 +82,23 @@
   &__item {
     padding-bottom: 5.2rem;
     @media screen and (min-width: 992px) {
-      padding-bottom: 3.8rem;
-      padding-right: 1rem;
+      padding-bottom: 3.7rem;
+      &:first-child {
+        padding-right: 1rem;
+      }
     }
 
     .heading {
       display: flex;
       background: $color-light-red;
+      border-radius: 2.5rem 0 0 2.5rem;
       @media screen and (min-width: 992px) {
         background: none;
       }
 
       .feature-number {
         width: 6.7rem;
-        height: 3.8rem;
+        height: 3.9rem;
         text-align: center;
         line-height: 2;
         font-size: 1.6rem;
@@ -116,7 +119,7 @@
       padding-top: 0.8rem;
       @media screen and (min-width: 992px) {
         padding-right: 0;
-        padding-left: 9.2rem;
+        padding-left: 9.4rem;
       }
     }
   }

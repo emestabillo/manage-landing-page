@@ -47,8 +47,7 @@ nav {
       transform: none;
       font-weight: 400;
       position: static;
-      // padding: 0.4rem 0 0 1.9rem;
-      padding: 0 0 0 1.9rem;
+      padding: 0 0 1rem 2.1rem;
       background: transparent;
     }
 
@@ -61,7 +60,7 @@ nav {
         text-decoration: none;
         color: $color-darker-blue;
         font-size: 1.8rem;
-        padding-bottom: 2rem;
+        padding: 1rem 0;
         display: block;
 
         &:hover {
@@ -71,6 +70,11 @@ nav {
         @media screen and (min-width: 992px) {
           font-size: 1.3rem;
           padding-bottom: 0;
+        }
+      }
+      &:first-child a {
+        @media screen and (max-width: 991px) {
+          padding-top: 0;
         }
       }
       &:last-child a {
@@ -101,7 +105,7 @@ nav {
     height: 0.4rem;
     width: 2.5rem;
     display: block;
-    background: $color-darker-blue;
+    background: $color-dark-blue;
     transition: all 0.3s ease-in-out;
   }
 

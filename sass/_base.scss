@@ -20,7 +20,7 @@ $color-light-gray: hsl(0, 0%, 98%);
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  // transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 html {
@@ -53,8 +53,8 @@ body {
       background-size: 82%;
     }
     @media screen and (min-width: 992px) {
-      background-size: 80rem 83rem;
-      background-position: top -16rem right -14rem;
+      background-size: 82rem 81rem;
+      background-position: top -15rem right -15rem;
     }
   }
   @media screen and (min-width: 1441px) {
@@ -63,6 +63,7 @@ body {
 }
 
 h1,
+h2,
 h3 {
   color: $color-dark-blue;
 }

@@ -1,4 +1,4 @@
-//MOBILE MENU ACTIVE - STOP BODY SCROLL
+//MOBILE MENU - STOP BODY SCROLL WHEN ACTIVE
 const body = document.querySelector("body");
 const menu = document.getElementById("toggle");
 
@@ -9,20 +9,21 @@ menu.addEventListener("click", function () {
 //TESTIMONIALS SLIDER
 let swiper = new Swiper(".swiper-container", {
   slidesPerView: 1,
-  spaceBetween: 32,
+  centeredSlides: true,
+  spaceBetween: 30,
   speed: 1000,
-  autoplay: {
-    delay: 4500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 4500,
+  //   disableOnInteraction: false,
+  // },
   breakpoints: {
     768: {
       slidesPerView: 2,
-      spaceBetween: 30,
+      spaceBetween: 25,
     },
     992: {
-      slidesPerView: 2.6,
-      // spaceBetween: 30,
+      initialSlide: 1,
+      slidesPerView: 2.59,
     },
   },
   loop: true,
@@ -39,17 +40,11 @@ const email = document.getElementById("email");
 
 function checkEmail(input) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  if (!re.test(input.value.trim()) || email.value == "") {
+  if (!re.test(input.value.trim())) {
     showError(input, "Email is not valid");
   } else {
     showSuccess(input);
   }
-
-  // if (re.test(input.value.trim())) {
-  //   showSuccess(input);
-  // } else {
-  //   showError(input, "Email is not valid");
-  // }
 }
 
 function showError(input, message) {
@@ -60,7 +55,7 @@ function showError(input, message) {
 }
 
 //Show success outline
-function showSuccess(input, message) {
+function showSuccess(input) {
   const form = input.parentElement;
   form.className = "success";
 }

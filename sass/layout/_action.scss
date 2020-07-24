@@ -5,10 +5,11 @@
   text-align: center;
   overflow: hidden;
   @media screen and (min-width: 992px) {
-    padding: 6.4rem 0 7.2rem;
+    padding: 6.4rem 0 7rem;
   }
 
-  &::before {
+  &::before,
+  &::after {
     content: " ";
     display: block;
     position: absolute;
@@ -16,7 +17,7 @@
     top: 6rem;
     width: 38rem;
     height: 49rem;
-    z-index: 100;
+    z-index: 1;
     opacity: 0.1;
     background-image: url(/images/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
@@ -30,7 +31,19 @@
     }
   }
 
+  &::after {
+    left: unset;
+    right: -15rem;
+    opacity: 0;
+    background-position: top -38.5rem right -19.4rem;
+    @media screen and (min-width: 1180px) {
+      opacity: 0.1;
+    }
+  }
+
   &__text {
+    position: relative; //add zindex
+    z-index: 2;
     @media screen and (min-width: 1180px) {
       display: flex;
       justify-content: space-between;
@@ -47,7 +60,9 @@
       width: 50%;
       padding-bottom: 0;
       text-align: left;
-      line-height: 1.1;
+      // line-height: 1.1;
+      line-height: 1.13;
+      font-size: 3.86rem;
     }
   }
 }
