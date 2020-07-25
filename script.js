@@ -1,9 +1,27 @@
 //MOBILE MENU - STOP BODY SCROLL WHEN ACTIVE
 const body = document.querySelector("body");
 const menu = document.getElementById("toggle");
+const nav = document.getElementById("nav");
+
+function noScroll() {
+  body.classList.toggle("stop-scroll");
+}
 
 menu.addEventListener("click", function () {
   body.classList.toggle("stop-scroll");
+});
+
+//MOBILE MENU - CLOSE IF ONE OF THE LINKS IS CLICKED
+// Listen for any clicks on the menu
+nav.addEventListener("click", function () {
+  const target = event.target.tagName;
+  // Make sure that the element being clicked is a link
+  if (target !== "A") {
+    return;
+  }
+  // Uncheck the checkbox
+  menu.checked = false;
+  !body.classList.toggle("stop-scroll");
 });
 
 //TESTIMONIALS SLIDER
