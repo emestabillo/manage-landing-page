@@ -12,10 +12,10 @@ let swiper = new Swiper(".swiper-container", {
   centeredSlides: true,
   spaceBetween: 30,
   speed: 1000,
-  // autoplay: {
-  //   delay: 4500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     768: {
       slidesPerView: 2,
