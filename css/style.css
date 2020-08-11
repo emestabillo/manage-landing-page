@@ -4,8 +4,7 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-  transition: all 0.3s; }
+  box-sizing: inherit; }
 
 html {
   box-sizing: border-box;
@@ -122,26 +121,26 @@ p {
 img {
   display: block; }
 
-nav {
+#nav {
   display: flex;
   justify-content: space-between;
   padding: 0 2.4rem 1.5rem 0.8rem;
   margin: 0 -2rem 0; }
   @media screen and (min-width: 768px) {
-    nav {
+    #nav {
       margin: 0; } }
   @media screen and (min-width: 992px) {
-    nav {
+    #nav {
       padding: 1.6rem 0 0 0; } }
-  nav .brand {
+  #nav .brand {
     align-self: flex-end; }
-    nav .brand img {
+    #nav .brand img {
       transform: scale(0.8); }
       @media screen and (min-width: 768px) {
-        nav .brand img {
+        #nav .brand img {
           transform: scale(1);
           padding-bottom: 0.3rem; } }
-  nav ul {
+  #nav ul {
     position: fixed;
     list-style: none;
     top: 10rem;
@@ -157,7 +156,7 @@ nav {
     border-radius: 1rem;
     z-index: 10; }
     @media screen and (min-width: 992px) {
-      nav ul {
+      #nav ul {
         display: flex;
         align-items: center;
         transform: none;
@@ -166,25 +165,25 @@ nav {
         padding: 0 0 1rem 2.1rem;
         background: transparent; } }
     @media screen and (min-width: 992px) {
-      nav ul li {
+      #nav ul li {
         padding-right: 3.2rem; } }
-    nav ul li a {
+    #nav ul li a {
       text-decoration: none;
       color: #1d1e25;
       font-size: 1.8rem;
       padding: 1rem 0;
       display: block; }
-      nav ul li a:hover {
+      #nav ul li a:hover {
         color: #9095a7; }
       @media screen and (min-width: 992px) {
-        nav ul li a {
+        #nav ul li a {
           font-size: 1.3rem;
           padding-bottom: 0; } }
     @media screen and (max-width: 991px) {
-      nav ul li:first-child a {
+      #nav ul li:first-child a {
         padding-top: 0; } }
     @media screen and (max-width: 991px) {
-      nav ul li:last-child a {
+      #nav ul li:last-child a {
         padding-bottom: 0; } }
 
 #toggle {
