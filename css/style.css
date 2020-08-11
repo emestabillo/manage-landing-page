@@ -350,7 +350,7 @@ header {
     @media screen and (min-width: 992px) {
       .features p {
         font-size: 1.6rem;
-        padding-right: 15vw;
+        padding-right: 12vw;
         line-height: 1.7; } }
   @media screen and (max-width: 991px) {
     .features__list {
