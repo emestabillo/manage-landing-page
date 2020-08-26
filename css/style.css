@@ -190,9 +190,14 @@ img {
   display: none; }
 
 .hamburger {
-  margin-top: 1rem;
-  z-index: 5;
-  cursor: pointer; }
+  cursor: pointer;
+  right: 2.4rem;
+  padding: 1rem 0;
+  align-self: center;
+  z-index: 30;
+  right: 5vw;
+  display: block;
+  padding: 1.2rem 0; }
   @media screen and (min-width: 992px) {
     .hamburger {
       display: none; } }
@@ -236,13 +241,12 @@ img {
 #toggle:checked ~ .overlay {
   opacity: 1;
   pointer-events: all;
-  width: 100%; }
+  width: 100%;
+  position: fixed;
+  z-index: 3; }
 
 #toggle:checked ~ ul {
   transform: scale(1); }
-
-.stop-scroll {
-  overflow: hidden; }
 
 header {
   padding: 4rem 0 6.8rem; }
